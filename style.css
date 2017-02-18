@@ -32,6 +32,10 @@ textarea{
     resize: none;
 }
 
+input {
+    font-size: 1em;
+}
+
 input[type="search"]{
     border: none;
     border-bottom: 2px solid;
