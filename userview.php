@@ -1,22 +1,25 @@
-<!DOCTYPE html>
+<?php include 'header.php'; ?>
 
-<html>
+        <div class="schoolcontainer">
+            <div>
+                <p id="schooltext">User</p>
+            </div>
 
-    <body>
-    
-        <div>
-            <p>User</p>
-        </div>
-        
-        <div>
-            <img src="b0ss.png" width="100px">
-        </div>
-        <div>
-            <p id="user_name">Bruh</p>
-        </div>
-        <div>
-            <p>User Type:</p>
-            <p id="user_type">Principal</p>
+            <div>
+                <img src="b0ss.png" width="100px">
+            </div>
+            <div>
+                <h1 id="school_name">Prince C. Pal</h1>
+            </div>
+            <div class="principal_row">
+                <p>User type:</p>
+                <p id="principal_name">Principal</p>
+            </div>
+            
+            <div>
+                <p style="margin: 0px;">About me:</p>
+                <p>Bruh bruh bruh</p>
+            </div>
         </div>
     </body>
     
