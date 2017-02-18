@@ -20,6 +20,10 @@ a:hover{
     color: #d16729;
 }
 
+textarea{
+    resize: none;
+}
+
 .topcontainer {
     background-color: #112233;
     display: flex;
@@ -159,10 +163,17 @@ right {
 }
 
 #submit_button {
-    
-    background-color: darkgray;
+    background-color: #ff8138;
     margin-top: 40px;
     text-align: center;
+    border-radius: 3px;
+    color: #000000;
+}
+
+#submit_button:hover{
+    cursor: pointer;
+    background-color: #d16729;
+    color: #FFFFFF;
 }
 
 #school_name {
