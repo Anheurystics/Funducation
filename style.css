@@ -104,3 +104,22 @@ right {
     width: 100%;
     margin: 10px 0;
 }
+
+.donatecontainer {
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#donate {
+    
+    font-size: 200%;   
+}
+
+#submit_button {
+    
+    background-color: darkgray;
+    margin-top: 40px;
+    text-align: center;
+}
