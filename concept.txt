@@ -1,0 +1,28 @@
+crowdfunding platform for schools +
+teaching materials donation + 
+Patreon like subsidy platform for teachers + 
+
+--
+home
+signup
+login
+dashboard - donated to projects
+browse projects and schools
+browse teaching materials (for teachers/principals)
+donate - how/whatever money / digital file
+
+
+--
+ERD
+School - name, location, user(principal)
+Project - name, school, collectedAmount, goalAmount
+User - name, email, password, role(0-donor, 1-teacher, 2-principal)
+ProjectTeacher - project, user(teacher)
+ProjectDonor - project, user
+SchoolTeacher - school, user(teacher)
+File - name, path
+
+1 school to 1 principal
+many projects to many teachers
+many donors to many projects
+many school to many teacher
