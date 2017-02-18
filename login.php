@@ -58,10 +58,10 @@ else
 <html>
     <body>
         <form action="" method="post">
-            <div style="display:flex; flex-direction:row; text-align:center; font-size: 130%; padding:20px">
+            <div class="login-register-container">
                 <div style="flex:2"></div>
                 
-                <div style="flex:3; border-radius: 15px 50px; background-color: #f4fafd; border: 2px solid lightblue">
+                <div class="login-register-shape">
                 
                     <div>
                         <p style="font-size: 300%; margin:20px">Login</p>
