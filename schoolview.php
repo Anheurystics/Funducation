@@ -5,23 +5,19 @@
     <body>
     
         <div>
-            <p>Project</p>
+            <p>School</p>
         </div>
         
         <div>
             <img src="b0ss.png" width="100px">
         </div>
         <div>
-            <p id="project_name">Project Name</p>
+            <p id="school_name">ADMU de Manila</p>
         </div>
         <div>
-            <p id="school">School:</p>
+            <p>Principal:</p>
+            <p id="school">Prince C. Pal</p>
         </div>
-        <div>
-            <p>Project Description</p>
-            <p id="project_desc">WE NEED MONEY</p>
-        </div>
-        <button>Donate</button>
     </body>
     
 </html>
