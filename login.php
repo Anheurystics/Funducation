@@ -33,8 +33,8 @@ if(!empty($_POST))
                 }
                 else
                 {
-                    $_SESSION['login_redirect'] = NULL;
                     header("Location: ".$_SESSION['login_redirect'].".php");
+                    $_SESSION['login_redirect'] = NULL;
                 }
                 exit();
             }          
@@ -48,7 +48,7 @@ if(!empty($_POST))
     }
 }
 else
-{
+{   
     if(!empty($_SESSION['logged_in']) && $_SESSION['logged_in'])
     {
         header("Location: index.php");
