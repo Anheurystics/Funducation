@@ -3,7 +3,6 @@
 $get_projects = null;
 if (isset($_GET['q'])) {
 	$query = "select * from projects where upper(name) like upper('%". $_GET['q'] . "%')";
-	echo $query;
 	$get_projects = mysqli_query($conn, $query);
 }
 
