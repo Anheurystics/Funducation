@@ -283,7 +283,7 @@ input[type="submit"]:hover{
     background-color: #ff8138;
     margin-top: 40px;
     text-align: center;
-    width: 120px;
+    width: auto;
     border-radius: 3px;
     color: #000000;
     -webkit-transition: background-color 500ms ease-out 0s;
