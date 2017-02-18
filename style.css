@@ -140,14 +140,13 @@ right {
 .donatecontainer {
     
     display: flex;
-    align-items: center;
     flex-direction: column;
 }
 
 .schoolcontainer {
     
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     
     margin-left: 10px; 
@@ -163,6 +162,8 @@ right {
     background-color: darkgray;
     margin-top: 40px;
     text-align: center;
+    height:25px;
+    width: 100px;
 }
 
 #school_name {
@@ -178,14 +179,41 @@ right {
     margin: 0px;
 }
 
-#principal_name {
-    
-    padding-left: 10px;
-}
-
 .footer{
     background-color: #333333;
     color: #FFFFFF;
     line-height: 50px;
     padding: 10px 20px;
+}
+
+.projnamediv {
+    
+    display: flex;
+    align-content: flex-start;
+    padding-left: 10px;
+}
+
+#project_name {
+    
+    margin: 0px;
+    text-align: left;
+    font-size: 300%
+}
+
+#school {
+    
+    margin-top: 0px;
+    font-size: 120%;
+}
+
+#user_header {
+    
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    background-color: aliceblue;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
 }

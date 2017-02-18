@@ -1,26 +1,28 @@
 <?php require('header.php'); ?>
 
-        <div class="donatecontainer">
+        <div style="display:flex; flex-direction: row">
+            
+            <div style="flex:3">
 
-            <div>
-                <p>Project</p>
-            </div>
+                <div class="projnamediv">
+                    <h1 id="project_name">Project Name</h1>
+                </div>
+                <div class="principal_row">
+                    <p id="school" style="padding-left: 10px;">ADMU de Manila</p>
+                </div>
+                <div class="projnamediv">
+                    <p style="margin: 0px; font-size: 120%">Project Description:
+                </div>
 
-            <div>
-                <img src="b0ss.png" width="100px">
+                <div class="projnamediv">
+                    <p style="margin:0px; font-size: 90%">This project is a pug. Pugs are very cute and we should all bow down to pugs. All hail mighty dog breed, pug. Mwah mwah :* This project is a pug. Pugs are very cute and we should all bow down to pugs. All hail mighty dog breed, pug. Mwah mwah :* This project is a pug. Pugs are very cute and we should all bow down to pugs. All hail mighty dog breed, pug. Mwah mwah :* This project is a pug. Pugs are very cute and we should all bow down to pugs. All hail mighty dog breed, pug. Mwah mwah :* </p>
+                </div>
+                <div id="submit_button" style="margin-top:10px; margin-left:10px;"><a href="donateview.php">Donate</a></div>
             </div>
-            <div>
-                <h1 id="project_name">Project Name</h1>
+            
+            <div style="display:flex; flex: 2; margin: 10px; align-items:center;">
+                <img src="b0ss.png" width=100%; height=auto; style="border-radius: 25px;">
             </div>
-            <div class="principal_row">
-                <p>School:</p>
-                <p id="school" style="padding-left: 10px;">School Name</p>
-            </div>
-            <div>
-                <p style="margin: 0px;">Project Description:</p>
-                <p id="project_desc" style="text-align: center;">WE NEED MONEY</p>
-            </div>
-            <div id="submit_button" style="margin-top:0px;"><a href="donateview.php">Donate</a></div>
         </div>
     
 <?php require('footer.php'); ?>
