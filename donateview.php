@@ -1,6 +1,6 @@
 <?php require('header.php'); ?>
 
-        <div class="donatecontainer">
+        <div class="donatecontainer" style="align-items:center">
 
             <div>
                 <p id="donate">Donate</p>

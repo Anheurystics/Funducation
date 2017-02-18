@@ -2,7 +2,7 @@
 
         <div style="display:flex; flex-direction: row">
             
-            <div style="flex:3">
+            <div style="flex:3; padding-top:10px">
 
                 <div class="projnamediv">
                     <h1 id="project_name">Project Name</h1>
@@ -15,9 +15,9 @@
                 </div>
 
                 <div class="projnamediv">
-                    <p style="margin:0px; font-size: 90%">This project is a pug. Pugs are very cute and we should all bow down to pugs. All hail mighty dog breed, pug. Mwah mwah :* This project is a pug. Pugs are very cute and we should all bow down to pugs. All hail mighty dog breed, pug. Mwah mwah :* This project is a pug. Pugs are very cute and we should all bow down to pugs. All hail mighty dog breed, pug. Mwah mwah :* This project is a pug. Pugs are very cute and we should all bow down to pugs. All hail mighty dog breed, pug. Mwah mwah :* </p>
+                    <p style="margin-top:0px; padding-right:20px font-size: 110%">This project is a pug. Pugs are very cute and we should all bow down to pugs. All hail mighty dog breed, pug. Mwah mwah :* This project is a pug. Pugs are very cute and we should all bow down to pugs. All hail mighty dog breed, pug. Mwah mwah :* This project is a pug. Pugs are very cute and we should all bow down to pugs. All hail mighty dog breed, pug. Mwah mwah :* This project is a pug. Pugs are very cute and we should all bow down to pugs. All hail mighty dog breed, pug. Mwah mwah :* </p>
                 </div>
-                <div id="submit_button" style="margin-top:10px; margin-left:10px;"><a href="donateview.php">Donate</a></div>
+                <a href="donateview.php"><div id="submit_button" style="margin-top:10px; margin-left:10px;">Donate</div></a>
             </div>
             
             <div style="display:flex; flex: 2; margin: 10px; align-items:center;">

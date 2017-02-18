@@ -37,11 +37,12 @@ else
 <html>
     <body>
         <form action="" method="post">
-            <div>
-                <p>Login</p>
-            </div>
+            <div style="display:flex; flex-direction: column;align-items: center;">
+                
+                <div>
+                    <p style="font-size: 300%">Login</p>
+                </div>
             
-            <div>
                 <div>
                     <label for="username">Username</label>
                     <input name="username" type="text">
@@ -50,7 +51,10 @@ else
                     <label for="password">Password</label>
                     <input name="password" type="password">
                 </div>
-                <input value="Login" type="submit">
+                <div style="margin-top:40px;">
+                
+                    <input value="Login" type="submit">
+                </div>
             </div>
         </form>
     </body>
