@@ -54,10 +54,25 @@ right {
     padding-right: 2% 
 }
 
-.b0ss {
-    display: flex;
+.front-page-pic{
+    position: relative;
 }
 
+.browse{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 50px;
+    background-color: #ff3fd2;
+    color: #000000;
+}
+
+.browse:hover{
+    cursor: pointer;
+    background-color: #ad2d8f;
+    color: #FFFFFF;
+}
 
 .bottom {
     display: flex;

@@ -31,13 +31,27 @@ mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
             </name>
             
             <right class="rightcontainer">
-            
-                <div id="login" class="button">
-                    <p><a href="login.php">Login</a></p>
-                </div>
-                
-                <div id="signup" class="button">
-                    <p><a href="register.php">Sign Up</a></p>
-                </div>
+                <?php 
+                if(empty($_SESSION['LoggedIn']) || empty($_SESSION['Username'])) 
+                {
+                    ?>
+                        <div id="login" class="button">
+                            <p><a href="login.php">Login</a></p>
+                        </div>
+
+                        <div id="signup" class="button">
+                            <p><a href="register.php">Sign Up</a></p>
+                        </div>
+                    <?php
+                }
+                else
+                {
+                   ?>
+                        <div id="dashboard" class="button">
+                            <p>Dashboard</p>
+                        </div>
+                    <?php              
+                }
+                ?>
             </right>
         </top>
