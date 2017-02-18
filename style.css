@@ -206,11 +206,17 @@ input[type="submit"]:hover{
 }
 
 .progress-bar{
-    background-color: #353638;
+    background-color: lightgray;
     border-radius: 10px;
     height: 10px;
     width: 100%;
     margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress-bar-fill{
+    background-color: orange;
+    height: 10px;
 }
 
 @media(max-width: 750px){
