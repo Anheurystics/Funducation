@@ -2,6 +2,13 @@
 <?php
 include "header.php";
 
+function checktableuser($conn, $tablename, $username, $password)
+{
+    $query = sprintf("select * from %s where name='%s' and password='%s'", $tablename, $username, $password);
+    echo $query;
+    return mysqli_num_rows(mysqli_query($conn, $query));
+}
+
 if(!empty($_POST))
 {
     if(!empty($_POST['username']) && !empty($_POST['password']))
@@ -10,16 +17,21 @@ if(!empty($_POST))
         $password = mysqli_escape_string($conn, $_POST['password']);
 
         $query = sprintf("select * from users where name = '%s' and password = '%s'", $username, $password);
-        if(mysqli_num_rows(mysqli_query($conn, $query)) == 1)
+
+        $roles = array('donors', 'teachers', 'principals');
+        $role = '';
+        foreach($roles as $r)
         {
-            $_SESSION['username'] = $username;
-            $_SESSION['logged_in'] = 1;
-            echo '<meta http-equiv="refresh" content="0;.">';
+            if(checktableuser($conn, $r, $username, $password) == 1)
+            {
+                $_SESSION['username'] = $username;
+                $_SESSION['logged_in'] = 1;
+                echo '<meta http-equiv="refresh" content="0;.">';
+                break;
+            }          
         }
-        else
-        {
-            echo 'wrong username or password!';
-        }
+
+        echo 'wrong username or password!';
     }
     else
     {

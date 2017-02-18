@@ -2,21 +2,39 @@ drop database bh2017;
 create database bh2017;
 use bh2017;
 
-create table users (
+create table donors (
     id int not null primary key auto_increment,
     name varchar(255),
     email varchar(255),
+    password varchar(255)
+);
+
+create table principals (
+    id int not nulL primary key auto_increment,
+    name varchar(255),
+    email varchar(255),
     password varchar(255),
-    role_id int
+    school_id int
 );
 
 create table schools (
     id int not null primary key auto_increment,
     name varchar(255),
     location varchar(255),
-    user_id int,
-    foreign key (user_id) references users(id)
+    principal_id int
 );
+
+create table teachers (
+    id int not nulL primary key auto_increment,
+    name varchar(255),
+    email varchar(255),
+    password varchar(255),
+    school_id int,
+    foreign key (school_id) references schools(id)
+);
+
+alter table schools add foreign key (principal_id) references principals(id);
+alter table principals add foreign key (school_id) references schools(id);
 
 create table projects (
     id int not null primary key auto_increment,
@@ -33,7 +51,7 @@ create table project_teacher (
     project_id int,
     teacher_id int,
     foreign key (project_id) references projects(id),
-    foreign key (teacher_id) references users(id)
+    foreign key (teacher_id) references teachers(id)
 );
 
 create table project_donor (
@@ -41,7 +59,7 @@ create table project_donor (
     project_id int,
     donor_id int,
     foreign key (project_id) references projects(id),
-    foreign key (donor_id) references users(id)
+    foreign key (donor_id) references donors(id)
 );
 
 create table school_teacher (
@@ -49,7 +67,7 @@ create table school_teacher (
     school_id int,
     teacher_id int,
     foreign key (school_id) references schools(id),
-    foreign key (teacher_id) references users(id)
+    foreign key (teacher_id) references teachers(id)
 );
 
 insert into schools (name, location) values ("ABC school", "here"), ("XYZ Elementary", "there");
