@@ -29,7 +29,7 @@ mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
             
             <right class="rightcontainer">
                 <?php 
-                if(empty($_SESSION['LoggedIn']) || empty($_SESSION['Username'])) 
+                if(empty($_SESSION['logged_in']) || empty($_SESSION['username'])) 
                 {
                     ?>
                         <div id="login" class="button">
@@ -44,11 +44,19 @@ mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
                 else
                 {
                    ?>
+                        <div>
+                        <?php echo 'Hello, '.$_SESSION['username'] ?>
+                        </div>
                         <div id="dashboard" class="button">
                             <p>Dashboard</p>
+                        </div>
+                        <div id="signout" class="button">
+                            <p><a href="logout.php">Sign Out</a></p>
                         </div>
                     <?php              
                 }
                 ?>
             </right>
         </top>
+
+        <div class="main-content">

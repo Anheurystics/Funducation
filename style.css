@@ -5,16 +5,75 @@ html {
 body {   
     background-color: #FFFFFF;
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
     text-decoration: none;
     color: #ff8138;
+    -webkit-transition: color 500ms ease-out 0s;
+    -moz-transition: color 500ms ease-out 0s;
+    -o-trasition: color 500ms ease-out 0s;
+    transition: color 500ms ease-out 0s;
 }
 
 a:hover{
     text-decoration: none;
     color: #d16729;
+    -webkit-transition: color 500ms ease-out 0s;
+    -moz-transition: color 500ms ease-out 0s;
+    -o-trasition: color 500ms ease-out 0s;
+    transition: color 500ms ease-out 0s;
+}
+
+textarea{
+    resize: none;
+}
+
+input[type="search"]{
+    border: none;
+    border-bottom: 2px solid;
+    border-bottom-color: gray;
+    -webkit-transition: border-bottom-color 500ms ease-out 0s;
+    -moz-transition: border-bottom-color 500ms ease-out 0s;
+    -o-trasition: border-bottom-color 500ms ease-out 0s;
+    transition: border-bottom-color 500ms ease-out 0s;
+}
+
+input[type="search"]:focus{
+    border-bottom-color: #ff8138;
+    -webkit-transition: border-bottom-color 500ms ease-out 0s;
+    -moz-transition: border-bottom-color 500ms ease-out 0s;
+    -o-trasition: border-bottom-color 500ms ease-out 0s;
+    transition: border-bottom-color 500ms ease-out 0s;
+}
+
+input[type="submit"]{
+    background-color: #ff8138;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-family: 'Oswald', sans-serif;
+    -webkit-transition: background-color 500ms ease-out 0s;
+    -moz-transition: background-color 500ms ease-out 0s;
+    -o-trasition: background-color 500ms ease-out 0s;
+    transition: background-color 500ms ease-out 0s;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #d16729;
+    color: #FFFFFF;
+    -webkit-transition: background-color 500ms ease-out 0s;
+    -moz-transition: background-color 500ms ease-out 0s;
+    -o-trasition: background-color 500ms ease-out 0s;
+    transition: background-color 500ms ease-out 0s;
+}
+
+*:focus{
+    outline: none;
 }
 
 .topcontainer {
@@ -41,7 +100,6 @@ name {
     flex: 1;
     text-align: center;
     font-size: 220%;
-    /*padding: 10px;*/
 }
 
 left {
@@ -52,6 +110,15 @@ left {
 right {
     flex: 1;
     padding-right: 2% 
+}
+
+.main-content{
+    flex: 1;
+    margin: 30px 30px;
+}
+
+.home-wrapper{
+    margin: -30px -30px;
 }
 
 .front-page-pic{
@@ -71,12 +138,20 @@ right {
     background-color: #ff8138;
     color: #000000;
     border-radius: 3px;
+    -webkit-transition: background-color 500ms ease-out 0s;
+    -moz-transition: background-color 500ms ease-out 0s;
+    -o-trasition: background-color 500ms ease-out 0s;
+    transition: background-color 500ms ease-out 0s;
 }
 
 .browse:hover{
     cursor: pointer;
     background-color: #d16729;
     color: #FFFFFF;
+    -webkit-transition: background-color 500ms ease-out 0s;
+    -moz-transition: background-color 500ms ease-out 0s;
+    -o-trasition: background-color 500ms ease-out 0s;
+    transition: background-color 500ms ease-out 0s;
 }
 
 .bottom {
@@ -98,6 +173,7 @@ right {
     display: flex;
     background-color: #e3e7ed;
     border-radius: 4px;
+    margin: 20px 0px;
 }
 
 .result-img{
@@ -152,10 +228,25 @@ right {
 }
 
 #submit_button {
-    
-    background-color: darkgray;
+    background-color: #ff8138;
     margin-top: 40px;
     text-align: center;
+    border-radius: 3px;
+    color: #000000;
+    -webkit-transition: background-color 500ms ease-out 0s;
+    -moz-transition: background-color 500ms ease-out 0s;
+    -o-trasition: background-color 500ms ease-out 0s;
+    transition: background-color 500ms ease-out 0s;
+}
+
+#submit_button:hover{
+    cursor: pointer;
+    background-color: #d16729;
+    color: #FFFFFF;
+    -webkit-transition: background-color 500ms ease-out 0s;
+    -moz-transition: background-color 500ms ease-out 0s;
+    -o-trasition: background-color 500ms ease-out 0s;
+    transition: background-color 500ms ease-out 0s;
 }
 
 #school_name {
