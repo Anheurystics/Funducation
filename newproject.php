@@ -41,7 +41,7 @@ if (isset($_GET['school'])) {
 			<ul id="items">
 			</ul>
 			<div>
-				<input type="button" onclick="addItem()" value="Add Item" />
+				<input class="inputthing" type="button" onclick="addItem()" value="Add Item" />
 			</div>
 		</div>
 
@@ -61,12 +61,20 @@ if (isset($_GET['school'])) {
 		newName.setAttribute('type', 'text');
 		newName.setAttribute('placeholder', 'Item Name');
 		newName.setAttribute('id', ('object'+itemsDiv.childElementCount+1))
+		newName.setAttribute('class', 'inputthing');
 		var newPrice = document.createElement('input');
 		newPrice.setAttribute('type', 'number');
 		newPrice.setAttribute('placeholder', 'Item Price');
 		newPrice.setAttribute('id', ('price'+itemsDiv.childElementCount+1))
+		newPrice.setAttribute('class', 'inputthing');
+		var del = document.createElement('input');
+		del.setAttribute('type', 'button');
+		del.setAttribute('class', 'inputthing');
+		del.setAttribute('value', 'remove');
+		del.setAttribute('onclick', 'removeItem('+(itemsDiv.childElementCount+1)+')')
 		newLi.appendChild(newName);
 		newLi.appendChild(newPrice);
+		newLi.appendChild(del);
 		itemsDiv.appendChild(newLi);
 		console.log();
 	}
