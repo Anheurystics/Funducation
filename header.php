@@ -15,7 +15,7 @@
             <left class="leftcontainer">
             
                 <div id="support" class="button">
-                    <p>Support a Thing</p>
+                    <p>Support a Classroom</p>
                 </div>
             </left>
             
@@ -33,13 +33,4 @@
                     <p>Sign Up</p>
                 </div>
             </right>
-        </top>    
-        <img class="b0ss" src="b0ss.png" width=100%/>
-        
-        <div class="bottom">
-            
-            
-        </div>
-    </body>
-
-</html>
+        </top>
