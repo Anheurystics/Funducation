@@ -270,7 +270,6 @@ input[type="submit"]:hover{
 .schoolcontainer {
     
     display: flex;
-    align-items: center;
     flex-direction: column;
          
 }
@@ -284,7 +283,7 @@ input[type="submit"]:hover{
     background-color: #ff8138;
     margin-top: 40px;
     text-align: center;
-    width: 120px;
+    width: auto;
     border-radius: 3px;
     color: #000000;
     -webkit-transition: background-color 500ms ease-out 0s;
@@ -311,11 +310,11 @@ input[type="submit"]:hover{
 }
 
 .principal_row {
-    
     display: flex;
     flex-direction: row;
     margin-top: 0px;
     padding-top: 0px;
+    padding-left: 30px;
 }
 
 .principal_name {
@@ -363,10 +362,19 @@ input[type="submit"]:hover{
 }
 
 #schoolheader {
-    
-    background: url(b0ss.png) 50% 50% no-repeat;
+    margin: -30px -30px -5px -30px;
+}
+
+#schoolheader img {
     width: 100%;
-    height:400px;
+}
+
+
+.school-info{
+    margin: 0px -30px;
+    padding: 30px;
+    background-color: #f4fafd;
+    border-bottom: 2px solid lightgray;
 }
 
 .inputthing {
