@@ -28,19 +28,19 @@ if (isset($_GET['school'])) {
 		<div class="form-container">
 			<div>
 				<label for="name">Name</label>
-				<input name="name" type="text">
+				<input class="inputthing" name="name" type="text">
 			</div>
 			<div>
 				<label for="goalAmount">Goal Amount</label>
-				<input name="goalAmount" type="number">
+				<input class="inputthing" name="goalAmount" type="number">
 			</div>
 			<div>
 				<label for="description">Description</label>
-				<textarea name="description"></textarea>
+				<textarea class="inputthing" name="description"></textarea>
 			</div>
 			<div>
 				<label for="image">Project Image</label>
-				<input type="file" name="image">
+				<input class="inputthing" type="file" name="image">
 			</div>
 		</div>
 
