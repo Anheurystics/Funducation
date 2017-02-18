@@ -57,39 +57,43 @@ else
 <html>
     <body>
             <form action="" method="post">
-                <div style="text-align: center; font-size:130%">
+                <div style="display:flex; flex-direction: row; text-align: center; font-size:130%">
 
-                    <div>
-                        <p style="font-size:300%; margin:20px">Sign Up</p>
-                    </div>                   
-                    <div class="form-container">
+                    <div style="flex:2"></div>
+
+                    <div style="flex:3; border-radius: 15px 50px; background-color: #AAAAAA">
+
+
                         <div>
-                            <label for="username">Username</label>
-                            <input name="username" type="text">
+                            <p style="font-size:300%; margin:20px">Sign Up</p>
+                        </div>                   
+                        <div class="form-container">
+                            <div>
+                                <input class="inputthing" name="username" type="text" placeholder="Username">
+                            </div>
+                            <div>
+                                <input class="inputthing" name="email" type="text" placeholder="E-mail">
+                            </div>
+                            <div>
+                                <input class="inputthing" name="password" type="password" placeholder="Password">
+                            </div>
+                            <div>
+                                <input class="inputthing" name="confirm" type="password" placeholder="Confirm Password">
+                            </div>
                         </div>
-                        <div>
-                            <label for="email">E-mail</label>
-                            <input name="email" type="text">
+                        <div style="font-size: 123%;">
+                            <p style="margin: 10px">Registering as:</p>
+                            <input type="radio" name="role" value="0" checked>Donor<br>
+                            <input type="radio" name="role" value="1">Teacher<br>
+                            <input type="radio" name="role" value="2">Principal<br> 
                         </div>
-                        <div>
-                            <label for="password">Password</label>
-                            <input name="password" type="password">
+
+                        <div style="margin-top:40px">
+                            <input style ="font-size:150%; margin-bottom:40px" value="Register" type="submit">
                         </div>
-                        <div>
-                            <label for="confirm">Confirm Password</label>
-                            <input name="confirm" type="password">
-                        </div>
-                    </div>
-                    <div>
-                        <p style="margin: 10px">Registering as:</p>
-                        <input type="radio" name="role" value="0" checked>Donor<br>
-                        <input type="radio" name="role" value="1">Teacher<br>
-                        <input type="radio" name="role" value="2">Principal<br> 
                     </div>
 
-                    <div style="margin-top:40px">
-                        <input style ="font-size:150%" value="Register" type="submit">
-                    </div>
+                    <div style="flex:2"></div>
                 </div>
             </form>
     </body>

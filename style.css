@@ -171,6 +171,7 @@ input[type="submit"]:hover{
 .form-container {
     max-width: 400px;
     margin: 0 auto;
+    font-size: 150%;
 }
 
 @media (max-width: 650px){
@@ -351,4 +352,13 @@ input[type="submit"]:hover{
     background: url(b0ss.png) 50% 50% no-repeat;
     width: 100%;
     height:400px;
+}
+
+.inputthing {
+    
+    font-size: 80%;
+    width: 100%;
+    padding:5px;
+    border-radius:5px;
+    border: solid 1px #AAAAAA;
 }
