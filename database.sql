@@ -49,3 +49,6 @@ create table school_teacher (
     foreign key (school_id) references schools(id),
     foreign key (teacher_id) references users(id)
 );
+
+insert into schools (name, location) values ("ABC school", "here"), ("XYZ Elementary", "there");
+insert into projects (name, school_id) values ("ABC project 1", 1), ("ABC project 2", 1), ("XYZ project 1", 2);
