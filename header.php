@@ -41,10 +41,10 @@ mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
                 {
                    ?>
                         <div>
-                        <?php echo 'Hello, '.$_SESSION['username'] ?>
+                            <p><?php echo 'Hello, '.$_SESSION['username'] ?></p>
                         </div>
                         <div id="dashboard" class="button">
-                            <p>Dashboard</p>
+                            <p><a href="dashboard.php">Dashboard</a></p>
                         </div>
                         <div id="signout" class="button">
                             <p><a href="logout.php">Sign Out</a></p>
