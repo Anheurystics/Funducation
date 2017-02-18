@@ -1,7 +1,7 @@
 <?php require('header.php');
 if (empty($_SESSION['logged_in']) || $_SESSION['logged_in'] == 0) {
     $_SESSION['login_redirect'] = "donateview.php?id=".$_GET['id'];
-    header("Location: index.php");
+    header("Location: login.php");
     exit();
 }
 
