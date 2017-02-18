@@ -31,12 +31,13 @@ if (isset($_GET['school'])) {
 				<input name="name" type="text">
 			</div>
 			<div>
-				<label for="goalAmount">Goal Amount</label>
-				<input name="goalAmount" type="number">
-			</div>
-			<div>
 				<label for="description">Description</label>
 				<textarea name="description"></textarea>
+			</div>
+			<ul id="items">
+			</ul>
+			<div>
+				<input type="button" onclick="addItem()" value="Add Item" />
 			</div>
 		</div>
 
@@ -47,3 +48,25 @@ if (isset($_GET['school'])) {
 </form>
 
 <?php require('footer.php'); ?>
+
+<script>
+	function addItem() {
+		var itemsDiv = document.getElementById('items');
+		var newLi = document.createElement('li');
+		var newName = document.createElement('input');
+		newName.setAttribute('type', 'text');
+		newName.setAttribute('placeholder', 'Item Name');
+		newName.setAttribute('id', ('object'+itemsDiv.childElementCount+1))
+		var newPrice = document.createElement('input');
+		newPrice.setAttribute('type', 'number');
+		newPrice.setAttribute('placeholder', 'Item Price');
+		newPrice.setAttribute('id', ('price'+itemsDiv.childElementCount+1))
+		newLi.appendChild(newName);
+		newLi.appendChild(newPrice);
+		itemsDiv.appendChild(newLi);
+		console.log();
+	}
+	function removeItem() {
+		
+	}
+</script>
