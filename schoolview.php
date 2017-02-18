@@ -14,24 +14,23 @@ if (isset($_GET['id'])) {
 ?>
 
 <div class="schoolcontainer">
-    <div>
-        <img src="b0ss.png" width="100px">
+    <div id="schoolheader">
     </div>
     <div>
         <h1 id="school_name"><?php echo $school['name'] ?></h1>
     </div>
     <div class="principal_row">
         <p>Location:</p>
-        <p id="location_name"><?php echo $school['location'] ?></p>
+        <p id="location_name" style="padding-left:10px"><?php echo $school['location'] ?></p>
     </div>
     <div class="principal_row">
-        <p>Principal:</p>
-        <p id="principal_name"><?php echo $principal['name'] ?></p>
+        <p class="principal_name">Principal:</p>
+        <p id="principal_name" style="padding-left:10px"><?php echo $principal['name'] ?></p>
     </div>
 
     <?php if ($get_projects) { ?>
     <div>
-        <p>Projects</p>
+        <p style="font-size:200%;">Projects</p>
         <div class="results">
         <?php while($project = mysqli_fetch_array($get_projects)) {?>
             <div class="result">

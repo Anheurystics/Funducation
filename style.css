@@ -217,8 +217,7 @@ input[type="submit"]:hover{
     display: flex;
     align-items: center;
     flex-direction: column;
-    
-    margin-left: 10px; 
+         
 }
 
 #donate {
@@ -253,14 +252,20 @@ input[type="submit"]:hover{
 #school_name {
     
     margin: 0px;
-    font-size: 200%;
+    font-size: 300%;
+    padding-bottom: 0px;
 }
 
 .principal_row {
     
     display: flex;
     flex-direction: row;
-    margin: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.principal_name {
+    
 }
 
 .footer{
@@ -300,4 +305,11 @@ input[type="submit"]:hover{
     flex-direction: column;
     align-items: center;
     text-align:center;
+}
+
+#schoolheader {
+    
+    background: url(b0ss.png) 50% 50% no-repeat;
+    width: 100%;
+    height:400px;
 }
