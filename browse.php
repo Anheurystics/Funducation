@@ -35,6 +35,7 @@ if (isset($_GET['q'])) {
 					<p><?php echo $school["location"] ?></p>
 				</div>
 			</div>
+			<div style="flex:1; padding:10px"></div>
 		</div>
 	<?php } ?>
 	</div>
