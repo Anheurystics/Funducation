@@ -310,11 +310,11 @@ input[type="submit"]:hover{
 }
 
 .principal_row {
-    
     display: flex;
     flex-direction: row;
     margin-top: 0px;
     padding-top: 0px;
+    padding-left: 30px;
 }
 
 .principal_name {
