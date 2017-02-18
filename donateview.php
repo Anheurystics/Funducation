@@ -27,9 +27,9 @@ if (isset($_GET['id'])) {
         <a href="./projectview.php?id=<?php echo $project["id"] ?>" title=""><p id="donate" style="padding-left:10px"><?php echo $project["name"] ?></p></a></div>
     </div>
     <form>
-        <div style="display:flex; align-items:center; flex-direction:column">
+        <div style="display:flex; align-items:center; flex-direction:column; font-size:150%;">
             <div>
-                <p style="text-align:center">Amount</p>
+                <p style="text-align:center; margin-top:0px;">Amount</p>
                 <textarea id="amount"></textarea>
             </div>
             <div>
