@@ -5,6 +5,9 @@ html {
 body {   
     background-color: #FFFFFF;
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
@@ -52,6 +55,10 @@ left {
 right {
     flex: 1;
     padding-right: 2% 
+}
+
+.main-content{
+    flex: 1;
 }
 
 .front-page-pic{

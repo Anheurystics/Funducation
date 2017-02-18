@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php require('header.php'); ?>
 
         <div class="donatecontainer">
 
@@ -21,6 +21,4 @@
             </form>
         </div>
 
-    </body>
-    
-</html>
+<?php require('footer.php');?>

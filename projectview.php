@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php require('header.php'); ?>
 
         <div class="donatecontainer">
 
@@ -22,6 +22,5 @@
             </div>
             <div id="submit_button" style="margin-top:0px;"><a href="donateview.php">Donate</a></div>
         </div>
-    </body>
     
-</html>
+<?php require('footer.php'); ?>
