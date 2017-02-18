@@ -2,13 +2,6 @@
 <?php
 include "header.php";
 
-function checktableuser($conn, $tablename, $username, $password)
-{
-    $query = sprintf("select * from %s where name='%s' and password='%s'", $tablename, $username, $password);
-    echo $query;
-    return mysqli_num_rows(mysqli_query($conn, $query));
-}
-
 if(!empty($_POST))
 {
     if(!empty($_POST['username']) && !empty($_POST['password']))
@@ -22,11 +15,19 @@ if(!empty($_POST))
         $role = '';
         foreach($roles as $r)
         {
-            if(checktableuser($conn, $r, $username, $password) == 1)
+            $query = sprintf("select * from %s where name='%s' and password='%s'", $r, $username, $password);
+            $result = mysqli_query($conn, $query);
+            if(mysqli_num_rows($result) == 1)
             {
+                $data = mysqli_fetch_array($result);
                 $_SESSION['username'] = $username;
+                $_SESSION['role'] = $r;
+                if(!empty($data['school_id']))
+                {
+                    $_SESSION['school_id'] = $data['school_id'];
+                }
                 $_SESSION['logged_in'] = 1;
-                echo '<meta http-equiv="refresh" content="0;.">';
+                echo '<meta http-equiv="refresh" content="0;dashboard.php">';
                 break;
             }          
         }
