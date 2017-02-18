@@ -43,13 +43,15 @@ if (isset($_GET['id'])) {
         <div style="display:flex; align-items:center; flex-direction:column; font-size:150%;">
             <div>
                 <p style="text-align:center; margin-top:0px;">Amount</p>
-                <input type="number" name="amount">
+                <input type="number" name="amount" value="50">
             </div>
+            <!--
             <div>
                 <p>Mode of Payment</p>
                 <input type="radio" value"mode1"/>Bruh<br>
                 <input type="radio" value"mode2"/>Suh<br>
             </div>
+            -->
             <input id="submit_button" type="submit" name="submit" value="Donate">
         </div>
     </form>
