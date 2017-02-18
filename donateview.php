@@ -19,7 +19,7 @@ if (isset($_GET['id'])) {
         mysqli_query($conn, $query);
         $result=mysqli_affected_rows($conn);
 
-        $query = "insert into project_donor (project_id, donor_id) values (" . $_GET['id'] . ", " . $_SESSION['id'] . ")";
+        $query = "insert into project_donor (project_id, donor_id, amount) values (" . $_GET['id'] . ", " . $_SESSION['id'] . ", " . $_POST['amount'] . ")";
         mysqli_query($conn, $query);
         $result2=mysqli_affected_rows($conn);
 

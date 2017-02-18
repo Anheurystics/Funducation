@@ -58,6 +58,7 @@ create table project_donor (
     id int not null primary key auto_increment,
     project_id int,
     donor_id int,
+    amount decimal,
     donated_date datetime not null default now(),
     foreign key (project_id) references projects(id),
     foreign key (donor_id) references donors(id)
