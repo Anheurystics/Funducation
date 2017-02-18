@@ -128,6 +128,15 @@ right {
     flex-direction: column;
 }
 
+.schoolcontainer {
+    
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    
+    margin-left: 10px; 
+}
+
 #donate {
     
     font-size: 200%;   
@@ -138,4 +147,22 @@ right {
     background-color: darkgray;
     margin-top: 40px;
     text-align: center;
+}
+
+#school_name {
+    
+    margin: 0px;
+    font-size: 200%;
+}
+
+.principal_row {
+    
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+}
+
+#principal_name {
+    
+    padding-left: 10px;
 }

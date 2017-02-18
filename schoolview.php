@@ -1,31 +1,29 @@
-<!DOCTYPE html>
+<?php include 'header.php'; ?>
 
-<html>
+        <div class="schoolcontainer">
+            <div>
+                <p id="schooltext">School</p>
+            </div>
 
-    <body>
-    
-        <div>
-            <p>School</p>
-        </div>
-        
-        <div>
-            <img src="b0ss.png" width="100px">
-        </div>
-        <div>
-            <p id="school_name">ADMU de Manila</p>
-        </div>
-        <div>
-            <p>Principal:</p>
-            <p id="school">Prince C. Pal</p>
-        </div>
-        
-        <div>
-            <p>Projects</p>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
+            <div>
+                <img src="b0ss.png" width="100px">
+            </div>
+            <div>
+                <h1 id="school_name">ADMU de Manila</h1>
+            </div>
+            <div class="principal_row">
+                <p>Principal:</p>
+                <p id="principal_name">Prince C. Pal</p>
+            </div>
+
+            <div>
+                <p class="principal_row">Projects</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
         </div>
     </body>
     
