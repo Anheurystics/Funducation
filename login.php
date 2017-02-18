@@ -49,22 +49,24 @@ else
 <html>
     <body>
         <form action="" method="post">
-            <div style="display:flex; flex-direction: column;align-items: center;">
+            <div style="text-align:center">
                 
                 <div>
                     <p style="font-size: 300%">Login</p>
                 </div>
-            
-                <div>
-                    <label for="username">Username</label>
-                    <input name="username" type="text">
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input name="password" type="password">
-                </div>
-                <div style="margin-top:40px;">
                 
+                <div class="form-container">
+                    <div>
+                        <label for="username">Username</label>
+                        <input name="username" type="text">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input name="password" type="password">
+                    </div>
+                </div>
+
+                <div style="margin-top:40px;">
                     <input value="Login" type="submit">
                 </div>
             </div>
