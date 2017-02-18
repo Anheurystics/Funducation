@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <?php
+include "..\bh2017.php";
+
 session_start();
 
-mysql_connect($mysql_host, $mysql_username, $mysql_password) or die("MySQL error: " . mysql_error());
-mysql_select_db("bh2017") or die("MySQL error: " . mysql_error());
+$conn = mysqli_connect($mysql_host, $mysql_username, $mysql_password) or die("MySQL error: " . mysqli_connect_error());
+mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
 ?>  
 <html>
 
