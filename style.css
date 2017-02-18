@@ -3,7 +3,7 @@ html {
 }
 
 body {   
-    background-color: #FFFFFF;
+    background-color: #fafafa;
     margin: 0px;
     display: flex;
     flex-direction: column;
@@ -32,14 +32,11 @@ textarea{
     resize: none;
 }
 
-input {
-    font-size: 1em;
-}
-
 input[type="search"]{
     border: none;
     border-bottom: 2px solid;
     border-bottom-color: gray;
+    background-color: transparent;
     -webkit-transition: border-bottom-color 500ms ease-out 0s;
     -moz-transition: border-bottom-color 500ms ease-out 0s;
     -o-trasition: border-bottom-color 500ms ease-out 0s;
@@ -180,7 +177,8 @@ input[type="submit"]:hover{
 
 .result{
     display: flex;
-    background-color: #e3e7ed;
+    background-color: #FFFFFF;
+    border: 1px solid lightgray;
     border-radius: 4px;
     margin: 20px 0px;
 }
@@ -206,7 +204,8 @@ input[type="submit"]:hover{
 
 .donation-stats{
     flex: 1;
-    padding: 10px;
+    padding: 10px 20px;
+    border-left: 2px solid lightgray;
 }
 
 .progress-bar{
@@ -310,7 +309,6 @@ input[type="submit"]:hover{
     display: flex;
     align-content: flex-start;
     padding-left: 10px;
-    flex-direction: column;
 }
 
 #project_name {
