@@ -2,6 +2,11 @@ crowdfunding platform for schools +
 teaching materials donation + 
 Patreon like subsidy platform for teachers + 
 
+dashboard
+donor: will see all the schools and teacher supported
+teacher: will see all the supporting patrons
+principals: will see status of school donations
+
 --
 home
 signup
