@@ -21,6 +21,7 @@ if(!empty($_POST))
             {
                 $data = mysqli_fetch_array($result);
                 $_SESSION['username'] = $username;
+                $_SESSION['id'] = $data['id'];
                 $_SESSION['role'] = $r;
                 if(!empty($data['school_id']))
                 {
