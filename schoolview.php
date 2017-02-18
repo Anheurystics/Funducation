@@ -15,22 +15,25 @@ if (isset($_GET['id'])) {
 
 <div class="schoolcontainer">
     <div id="schoolheader">
+        <img src="b0ss.png" />
     </div>
-    <div>
-        <h1 id="school_name"><?php echo $school['name'] ?></h1>
-    </div>
-    <div class="principal_row">
-        <p>Location:</p>
-        <p id="location_name" style="padding-left:10px"><?php echo $school['location'] ?></p>
-    </div>
-    <div class="principal_row">
-        <p class="principal_name">Principal:</p>
-        <p id="principal_name" style="padding-left:10px"><?php echo $principal['name'] ?></p>
+    <div class="school-info">
+        <div>
+            <h1 id="school_name"><?php echo $school['name'] ?></h1>
+        </div>
+        <div class="principal_row">
+            <p>Location:</p>
+            <p id="location_name" style="padding-left:10px"><?php echo $school['location'] ?></p>
+        </div>
+        <div class="principal_row">
+            <p class="principal_name">Principal:</p>
+            <p id="principal_name" style="padding-left:10px"><?php echo $principal['name'] ?></p>
+        </div>
     </div>
 
     <?php if ($get_projects) { ?>
     <div>
-        <p style="font-size:150%;">Projects</p>
+        <h1>Projects</h1>
         <div class="results">
         <?php while($project = mysqli_fetch_array($get_projects)) {?>
             <div class="result">
@@ -46,12 +49,14 @@ if (isset($_GET['id'])) {
                     </div>
                 </div>      
                 <div class="donation-stats">
-                    <p>Goal: <?php echo $project['goalAmount'] ?></p>
+                    <p>Goal: <?php echo "₱" . $project['goalAmount'] ?></p>
                     <?php if($project['collectedAmount'] == $project['goalAmount']) { ?>
-                        <p>Accomplished</p>
+                            <p>Accomplished</p>
                     <?php } else { ?>
-                        <progress value="<?php echo $project['collectedAmount'] ?>" max="<?php echo $project['goalAmount'] ?>"></progress>
-                        <p><?php echo $project['goalAmount'] - $project['collectedAmount'] ?> still needed</p>
+                        <?php $percentage = (($project['collectedAmount'] * 1.0) / $project['goalAmount']) * 100;
+                        $percentage = round($percentage, 2)?>
+                        <div class="progress-bar"><div class="progress-bar-fill" style="width:<?php echo $percentage . '%';?>"></div></div>
+                        <p><?php echo "₱" . ($project['goalAmount'] - $project['collectedAmount']) ?> still needed</p>
                     <?php } ?>
                 </div>
             </div>

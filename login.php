@@ -58,26 +58,31 @@ else
 <html>
     <body>
         <form action="" method="post">
-            <div style="text-align:center; font-size: 130%">
+            <div class="login-register-container">
+                <div style="flex:2"></div>
                 
-                <div>
-                    <p style="font-size: 300%; margin:20px">Login</p>
-                </div>
+                <div class="login-register-shape">
                 
-                <div class="form-container">
                     <div>
-                        <label for="username">Username</label>
-                        <input name="username" type="text">
+                        <p style="font-size: 300%; margin:20px">Login</p>
                     </div>
-                    <div>
-                        <label for="password">Password</label>
-                        <input name="password" type="password">
-                    </div>
-                </div>
 
-                <div style="margin-top:40px;">
-                    <input style="font-size:150%" value="Login" type="submit">
+                    <div class="form-container">
+                        <div>
+                            <input class="inputthing" name="username" type="text" placeholder="Username">
+                        </div>
+                        <div>
+                            <input class="inputthing" name="password" type="password" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div style="margin-top:40px; margin-bottom: 40px;">
+                        <input style="font-size:150%" value="Login" type="submit">
+                    </div>
                 </div>
+                
+                <div style="flex:2"></div>
+                
             </div>
         </form>
     </body>
