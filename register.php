@@ -61,7 +61,7 @@ else
 
                     <div style="flex:2"></div>
 
-                    <div style="flex:3; border-radius: 15px 50px; background-color: #AAAAAA">
+                    <div style="flex:3; border-radius: 15px 50px; background-color: #f4fafd; border: 2px solid lightblue">
 
 
                         <div>
