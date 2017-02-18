@@ -56,28 +56,28 @@ else
 <html>
     <body>
             <form action="" method="post">
-                <div style="display:flex; flex-direction: column;align-items: center;">
+                <div style="text-align: center">
 
                     <div>
                         <p style="font-size:300%">Sign Up</p>
-                    </div>
-                    
-
-                    <div>
-                        <label for="username">Username</label>
-                        <input name="username" type="text">
-                    </div>
-                    <div>
-                        <label for="email">E-mail</label>
-                        <input name="email" type="text">
-                    </div>
-                    <div>
-                        <label for="password">Password</label>
-                        <input name="password" type="password">
-                    </div>
-                    <div>
-                        <label for="confirm">Confirm Password</label>
-                        <input name="confirm" type="password">
+                    </div>                   
+                    <div class="form-container">
+                        <div>
+                            <label for="username">Username</label>
+                            <input name="username" type="text">
+                        </div>
+                        <div>
+                            <label for="email">E-mail</label>
+                            <input name="email" type="text">
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input name="password" type="password">
+                        </div>
+                        <div>
+                            <label for="confirm">Confirm Password</label>
+                            <input name="confirm" type="password">
+                        </div>
                     </div>
                     <div>
                         <p>Registering as:</p>
