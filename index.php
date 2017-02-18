@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php require('header.php'); ?>
 
         <div class="front-page-pic">
         	<img src="b0ss.png" width=100%/>
@@ -9,7 +9,4 @@
                        
         </div>
 
-        <div class="footer"><?php echo "©" . date('Y') . " Team Idk Yet";?></div>
-    </body>
-
-</html>
+<?php require('footer.php'); ?>

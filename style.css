@@ -89,6 +89,11 @@ right {
     margin-right: 5px;
 }
 
+.results{
+    padding: 30px 0px;
+    margin: 0px 20px;
+}
+
 .result{
     display: flex;
     background-color: #e3e7ed;
