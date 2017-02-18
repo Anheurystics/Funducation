@@ -2,22 +2,31 @@
 <?php
 include "header.php";
 
+function checktableuser($conn, $tablename, $username)
+{
+    $query = sprintf("select * from %s where name='%s'", $tablename, $username);
+    return mysqli_num_rows(mysqli_query($conn, $query));
+}
+
 if(!empty($_POST))
 {
     if(!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['confirm']))
     {
+        $roles = array("donors", "teachers", "principals");
+
         $email = mysqli_escape_string($conn, $_POST['email']);
         $username = mysqli_escape_string($conn, $_POST['username']);
         $password = mysqli_escape_string($conn, $_POST['password']);
         $confirm = mysqli_escape_string($conn, $_POST['confirm']);
-        $role = $_POST['role'];
-
-        $query = "select * from users where name = '" . $username . "'";
-        if(mysqli_num_rows(mysqli_query($conn, $query)) == 0)
+        $role = $roles[$_POST['role']];
+        
+        if(checktableuser($conn, 'donors', $username) == 0 
+        && checktableuser($conn, 'principals', $username) == 0
+        && checktableuser($conn, 'teachers', $username) == 0)
         {
             if($password == $confirm)
             {
-                $query = sprintf("insert into users (name, email, password, role_id) values (%s, %s, %s, %d);", $username, $email, $password, $role);
+                $query = sprintf("insert into %s (name, email, password) values ('%s', '%s', '%s');", $role, $username, $email, $password);
                 $user_insert = mysqli_query($conn, $query) or die(mysqli_error($conn)); 
                 echo "Registered successfully!";
             }
@@ -28,7 +37,7 @@ if(!empty($_POST))
         }
         else
         {
-           echo 'Username does not exist in our database!';
+           echo 'Username is already taken!';
         }
     }
     else
@@ -38,7 +47,7 @@ if(!empty($_POST))
 }
 else
 {
-    if($_SESSION['logged_in'])
+    if(!empty($_SESSION['logged_in']) && $_SESSION['logged_in'])
     {
         echo '<meta http-equiv="refresh" content="0;.">';
     }

@@ -17,17 +17,13 @@ mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
     </head>
 
     <body>
-        <top class="topcontainer">
-        
-            <left class="leftcontainer">
-            
-            </left>
-            
-            <name>
+        <nav class="topcontainer">
+                    
+            <div class="site-title">
                 <a href="./">TITLE OF APP</a>
-            </name>
+            </div>
             
-            <right class="rightcontainer">
+            <div class="rightcontainer">
                 <?php 
                 if(empty($_SESSION['logged_in']) || empty($_SESSION['username'])) 
                 {
@@ -56,7 +52,7 @@ mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
                     <?php              
                 }
                 ?>
-            </right>
-        </top>
+            </div>
+        </nav>
 
         <div class="main-content">
