@@ -33,11 +33,11 @@ mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
             <right class="rightcontainer">
             
                 <div id="login" class="button">
-                    <p>Login</p>
+                    <p><a href="login.php">Login</a></p>
                 </div>
                 
                 <div id="signup" class="button">
-                    <p>Sign Up</p>
+                    <p><a href="register.php">Sign Up</a></p>
                 </div>
             </right>
         </top>
