@@ -59,7 +59,7 @@ else
 <html>
     <body>
         <form action="" method="post">
-            <div style="text-align:center; font-size: 150%">
+            <div style="text-align:center; font-size: 130%">
                 
                 <div>
                     <p style="font-size: 300%; margin:20px">Login</p>
