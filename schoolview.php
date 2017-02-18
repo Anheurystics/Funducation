@@ -2,10 +2,6 @@
 
         <div class="schoolcontainer">
             <div>
-                <p id="schooltext">School</p>
-            </div>
-
-            <div>
                 <img src="b0ss.png" width="100px">
             </div>
             <div>

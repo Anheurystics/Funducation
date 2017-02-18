@@ -1,24 +1,19 @@
 <?php require('header.php'); ?>
 
-        <div class="schoolcontainer">
-            <div>
-                <p id="schooltext">User</p>
-            </div>
-
-            <div>
-                <img src="b0ss.png" width="100px">
-            </div>
-            <div>
-                <h1 id="school_name">Prince C. Pal</h1>
-            </div>
-            <div class="principal_row">
-                <p>User type:</p>
-                <p id="principal_name">Principal</p>
+        <div class="donatecontainer">
+            <div id="user_header">
+                <img src="b0ss.png" width="200px" height=200px; style="border-radius:100px; margin:20px;">
+                <div style="margin-bottom:20px;">
+                    <h1 id="school_name">Prince C. Pal</h1>
+                    <p id="principal_name" style="margin:0px;">Principal</p>  
+                </div>
             </div>
             
-            <div>
-                <p style="margin: 0px;">About me:</p>
-                <p>Bruh bruh bruh</p>
+            
+            
+            <div style="font-size:120%; display:flex; flex-direction: column; margin-left:60px; margin-right:60px;">
+                <p style="margin-bottom:0px;">About Me:</p>
+                <p style="margin: 0px; font-size:90%; color:gray; text-align: justify">Puggy puggy pug. Puggy puggy puggy pug. Puggy puggy pug. Puggy puggy puggy pug. Puggy puggy pug. Puggy puggy puggy pug. Puggy puggy pug. Puggy puggy puggy pug. Puggy puggy pug. Puggy puggy puggy pug. Puggy puggy pug. Puggy puggy puggy pug. Puggy puggy pug. Puggy puggy puggy pug. Puggy puggy pug. Puggy puggy puggy pug. Puggy puggy pug. Puggy puggy puggy pug. Puggy puggy pug. Puggy puggy puggy pug. Puggy puggy pug. Puggy puggy puggy pug. Puggy puggy pug. Puggy puggy puggy pug. </p>
             </div>
         </div>
 

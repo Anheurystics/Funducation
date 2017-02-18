@@ -81,35 +81,21 @@ input[type="submit"]:hover{
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: white;
+    line-height: 60px;
 }
 
 .rightcontainer {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-}
-
-.leftcontainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-name {
-    flex: 1;
-    text-align: center;
-    font-size: 220%;
-}
-
-left {
-    flex: 1;
-    padding-left: 2%
-}
-
-right {
     flex: 1;
     padding-right: 2% 
+}
+
+.site-title {
+    flex: 1;
+    font-size: 220%;
+    margin-left: 20px;
 }
 
 .main-content{
@@ -223,14 +209,13 @@ right {
 .donatecontainer {
     
     display: flex;
-    align-items: center;
     flex-direction: column;
 }
 
 .schoolcontainer {
     
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     
     margin-left: 10px; 
@@ -245,6 +230,8 @@ right {
     background-color: #ff8138;
     margin-top: 40px;
     text-align: center;
+    height:25px;
+    width: 100px;
     border-radius: 3px;
     color: #000000;
     -webkit-transition: background-color 500ms ease-out 0s;
@@ -276,14 +263,41 @@ right {
     margin: 0px;
 }
 
-#principal_name {
-    
-    padding-left: 10px;
-}
-
 .footer{
     background-color: #333333;
     color: #FFFFFF;
     line-height: 50px;
     padding: 10px 20px;
+}
+
+.projnamediv {
+    
+    display: flex;
+    align-content: flex-start;
+    padding-left: 10px;
+}
+
+#project_name {
+    
+    margin: 0px;
+    text-align: left;
+    font-size: 300%
+}
+
+#school {
+    
+    margin-top: 0px;
+    font-size: 120%;
+}
+
+#user_header {
+    
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    background-color: aliceblue;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
 }

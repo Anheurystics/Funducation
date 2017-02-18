@@ -55,38 +55,41 @@ else
 ?>
 <html>
     <body>
-        <div>
-            <p>Sign Up</p>
-        </div>
-        <div>
             <form action="" method="post">
-                <div>
-                    <label for="username">Username</label>
-                    <input name="username" type="text">
-                </div>
-                <div>
-                    <label for="email">E-mail</label>
-                    <input name="email" type="text">
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input name="password" type="password">
-                </div>
-                <div>
-                    <label for="confirm">Confirm Password</label>
-                    <input name="confirm" type="password">
-                </div>
-                <div>
-                    <p>Registering as:</p>
-                    <input type="radio" name="role" value="0" checked>Donor<br>
-                    <input type="radio" name="role" value="1">Teacher<br>
-                    <input type="radio" name="role" value="2">Principal<br> 
-                </div>
-                
-                <div>
-                    <input value="Register" type="submit">
+                <div style="display:flex; flex-direction: column;align-items: center;">
+
+                    <div>
+                        <p style="font-size:300%">Sign Up</p>
+                    </div>
+                    
+
+                    <div>
+                        <label for="username">Username</label>
+                        <input name="username" type="text">
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input name="email" type="text">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input name="password" type="password">
+                    </div>
+                    <div>
+                        <label for="confirm">Confirm Password</label>
+                        <input name="confirm" type="password">
+                    </div>
+                    <div>
+                        <p>Registering as:</p>
+                        <input type="radio" name="role" value="0" checked>Donor<br>
+                        <input type="radio" name="role" value="1">Teacher<br>
+                        <input type="radio" name="role" value="2">Principal<br> 
+                    </div>
+
+                    <div style="margin-top:40px">
+                        <input value="Register" type="submit">
+                    </div>
                 </div>
             </form>
-        </div>
     </body>
 </html>
