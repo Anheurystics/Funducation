@@ -18,7 +18,12 @@ if (isset($_GET['id'])) {
         $query = "update projects set collectedAmount=(collectedAmount+" . $_POST['amount'] . ") where id=" . $_GET['id'];
         mysqli_query($conn, $query);
         $result=mysqli_affected_rows($conn);
-        if ($result) {
+
+        $query = "insert into project_donor (project_id, donor_id) values (" . $_GET['id'] . ", " . $_SESSION['id'] . ")";
+        mysqli_query($conn, $query);
+        $result2=mysqli_affected_rows($conn);
+
+        if ($result && $result2) {
             header("Location: projectview.php?id=".$_GET['id']);
             exit();
         }

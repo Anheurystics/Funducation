@@ -58,6 +58,7 @@ create table project_donor (
     id int not null primary key auto_increment,
     project_id int,
     donor_id int,
+    donated_date datetime not null default now(),
     foreign key (project_id) references projects(id),
     foreign key (donor_id) references donors(id)
 );
@@ -74,3 +75,5 @@ insert into schools (name, location) values ("ABC school", "here"), ("XYZ Elemen
 insert into projects (name, school_id, description, collectedAmount, goalAmount) values ("ABC project 1", 1, "This is ABC's project 1.", 10000, 100000), ("ABC project 2", 1, "This is ABC's project 2.", 2000, 50000), ("XYZ project 1", 2, "This is XYZ's project 1.", 4000, 100000);
 insert into principals (name, email, password, school_id) values ("Principal ABC", "principalabc@email.com", "pabc", 1);
 update schools set principal_id=1 where id=1;
+
+insert into donors (name, email, password) values ("user", "user@user.com", "pass");
