@@ -4,6 +4,7 @@
     $school = mysqli_fetch_assoc(mysqli_query($conn, sprintf("select * from schools where id=%d;", $principal['school_id'])));
 ?>
 <h1>Your Projects for <?php echo $school["name"] ?></h1>
+<a href="<?php echo "newproject.php?school=".$school['id'] ?>"><div id="submit_button" style="margin-top:10px; margin-left:10px; display: inline-block">New Project</div></a>
 <?php
 if($projects)
 {
