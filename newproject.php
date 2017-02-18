@@ -18,7 +18,7 @@ if (isset($_GET['school'])) {
 
 
 ?>
-<form action="" method="post">
+<form action="" method="post" enc="multipart/form-data">
 	<div style="text-align:center; font-size: 130%">
 		
 		<div>
@@ -37,6 +37,10 @@ if (isset($_GET['school'])) {
 			<div>
 				<label for="description">Description</label>
 				<textarea name="description"></textarea>
+			</div>
+			<div>
+				<label for="image">Project Image</label>
+				<input type="file" name="image">
 			</div>
 		</div>
 
