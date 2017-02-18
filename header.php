@@ -1,5 +1,10 @@
 <!DOCTYPE html>
+<?php
+session_start();
 
+mysql_connect($mysql_host, $mysql_username, $mysql_password) or die("MySQL error: " . mysql_error());
+mysql_select_db("bh2017") or die("MySQL error: " . mysql_error());
+?>  
 <html>
 
     <head>
