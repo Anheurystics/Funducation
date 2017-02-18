@@ -21,9 +21,6 @@ mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
         
             <left class="leftcontainer">
             
-                <div id="support" class="button">
-                    <p>Support a Classroom</p>
-                </div>
             </left>
             
             <name>
