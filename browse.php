@@ -1,13 +1,16 @@
 <?php require('header.php');
 
-$get_schools = null;
-$get_projects = null;
-
 if (isset($_GET['q'])) {
 	$query = "select * from projects where upper(name) like upper('%". $_GET['q'] . "%')";
 	$get_projects = mysqli_query($conn, $query);
 
 	$query = "select * from schools where upper(name) like upper('%". $_GET['q'] . "%')";
+	$get_schools = mysqli_query($conn, $query);
+} else {
+	$query = "select * from projects";
+	$get_projects = mysqli_query($conn, $query);
+
+	$query = "select * from schools";
 	$get_schools = mysqli_query($conn, $query);
 }
 
@@ -22,7 +25,7 @@ if (isset($_GET['q'])) {
 		<h1>Schools</h1>
 	</div>
 	<div class="results">
-	<?php while($school = mysqli_fetch_array($get_schools)) {?>
+	<?php while ($school = mysqli_fetch_array($get_schools)) {?>
 		<div class="result">
 			<div class="result-img">
 				<img src="pic.jpg"/>
