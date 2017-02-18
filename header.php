@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-include "..\bh2017.php";
+include "../bh2017.php";
 
 session_start();
 
