@@ -16,7 +16,7 @@ if (isset($_GET['id'])) {
             <h1 id="project_name"><?php echo $project["name"] ?></h1>
         </div>
         <div class="principal_row">
-            <p id="school" style="padding-left: 10px;"><?php echo $school["name"] ?></p>
+            <a href="./schoolview.php?id=<?php echo $school["id"] ?>"><p id="school" style="padding-left: 10px;"><?php echo $school["name"] ?></p></a>
         </div>
         <div class="projnamediv">
             <p style="margin: 0px; font-size: 120%">Project Description:
