@@ -9,16 +9,6 @@ if (isset($_GET['id'])) {
     header("Location: index.php");
     exit();
 }
-
-$donate_link = "";
-if(!empty($_SESSION['logged_in']) && $_SESSION['role'] == 'donor')
-{
-    $donate_link = "donateview.php?id=".$project['id'];
-}
-else
-{
-    $donate_link = "./login.php";
-}
 ?>
 <div style="display:flex; flex-direction: row">
     <div style="flex:3; padding-top:10px">
@@ -44,10 +34,9 @@ else
             <progress value="<?php echo $project['collectedAmount'] ?>" max="<?php echo $project['goalAmount'] ?>"></progress>
             <p><?php echo $project['goalAmount'] - $project['collectedAmount'] ?> still needed</p>
         </div>
-        <?php if(empty($_SESSION['logged_in']) || ($_SESSION['logged_in'] == 0 || $_SESSION['role'] == 'donor')) { ?>
-        <a href="<?php echo $donate_link ?>"><div id="submit_button" style="margin-top:10px; margin-left:10px;">Donate</div></a>
+        <?php if(empty($_SESSION['logged_in']) || ($_SESSION['logged_in'] == 0 || $_SESSION['role'] == 'donors')) { ?>
+        <a href="<?php echo "donateview.php?id=".$project['id'] ?>"><div id="submit_button" style="margin-top:10px; margin-left:10px;">Donate</div></a>
         <?php } ?>
-        <!--Redirect login back to projectview once login is done-->
     </div>
     
     <div style="display:flex; flex: 2; margin: 10px; align-items:center;">

@@ -49,7 +49,8 @@ else
 {
     if(!empty($_SESSION['logged_in']) && $_SESSION['logged_in'])
     {
-        echo '<meta http-equiv="refresh" content="0;.">';
+        header("Location: index.php");
+        exit();
     }
 }
 ?>

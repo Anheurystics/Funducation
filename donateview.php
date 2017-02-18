@@ -1,4 +1,17 @@
 <?php require('header.php');
+if(empty($_SESSION['logged_in']) || $_SESSION['logged_in'] == 0)
+{
+    $_SESSION['login_redirect'] = "donateview.php?id=".$_GET['id'];
+    header("Location: index.php");
+    exit();
+}
+
+if($_SESSION['role'] != 'donors')
+{
+    header("Location: projectview.php?id=".$_GET['id']);
+    exit();
+}
+
 if (isset($_GET['id'])) {
     $query = "select * from projects where id=" . $_GET['id'];
     $project = mysqli_fetch_assoc(mysqli_query($conn, $query));

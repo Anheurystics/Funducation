@@ -27,8 +27,15 @@ if(!empty($_POST))
                     $_SESSION['school_id'] = $data['school_id'];
                 }
                 $_SESSION['logged_in'] = 1;
-                echo '<meta http-equiv="refresh" content="0;dashboard.php">';
-                break;
+                if(empty($_SESSION['login_redirect']))
+                {
+                    header("Location: dashboard.php");
+                }
+                else
+                {
+                    header("Location: ".$_SESSION['login_redirect'].".php");
+                }
+                exit();
             }          
         }
 
@@ -43,7 +50,7 @@ else
 {
     if(!empty($_SESSION['logged_in']) && $_SESSION['logged_in'])
     {
-        echo '<meta http-equiv="refresh" content="0;.">';
+        header("Location: index.php");
     }
 }
 ?>

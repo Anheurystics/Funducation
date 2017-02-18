@@ -2,5 +2,6 @@
 include 'header.php';
 
 session_destroy();
-echo('<meta http-equiv="refresh" content="0;.">');
+header("Location: index.php");
+exit();
 ?>
