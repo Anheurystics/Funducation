@@ -309,6 +309,7 @@ input[type="submit"]:hover{
     display: flex;
     align-content: flex-start;
     padding-left: 10px;
+    flex-direction: column;
 }
 
 #project_name {
