@@ -1,7 +1,8 @@
 <?php
     $donations = mysqli_query($conn, sprintf("select project_id, sum(amount) as total_amount from project_donor where donor_id=%d group by project_id;", $_SESSION['id']));
 ?>
-<h1>Your Donations</h1>
+<h1>Donor Dashboard</h1>
+<h2>Your Donations</h2>
 <?php
 if($donations)
 {

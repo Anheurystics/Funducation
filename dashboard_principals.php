@@ -3,11 +3,12 @@
     $projects = mysqli_query($conn, sprintf("select * from projects where school_id=%d;", $principal['school_id']));
     $school = mysqli_fetch_assoc(mysqli_query($conn, sprintf("select * from schools where id=%d;", $principal['school_id'])));
 ?>
+<h1>Principal Dashboard</h1>
 <?php
 if($school)
 {
     ?>
-    <h1>Your Projects for <?php echo $school["name"] ?></h1>
+    <h2>Your Projects for <?php echo $school["name"] ?></h2>
     <a href="<?php echo "newproject.php?school=".$school['id'] ?>"><div id="submit_button" style="margin-top:10px; margin-left:10px; display: inline-block">New Project</div></a>
     <?php
     if($projects)
@@ -46,7 +47,7 @@ if($school)
 else
 {
     ?>
-    <h1>You don't have a school registered yet. <a href="newschool.php">Register yours now</a></h1>
+    <h2>You don't have a school registered yet. <a href="<?php echo "newschool.php?principal=".$_SESSION['id'] ?>">Register yours now</a></h2>
     <?php
 }
 ?>
