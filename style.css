@@ -53,7 +53,7 @@ input[type="search"]:focus{
 input[type="submit"]{
     background-color: #ff8138;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 20px;
     border-radius: 3px;
     font-family: 'Oswald', sans-serif;
     -webkit-transition: background-color 500ms ease-out 0s;
