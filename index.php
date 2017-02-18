@@ -6,7 +6,8 @@
         </div>
 
         <div class="bottom">
-                       
+            <p style="margin-bottom:10px">About us</p>
+            <p style="font-size:80%; margin-top:0px;">Blah blah blah</p>
         </div>
 	</div>
 <?php require('footer.php'); ?>

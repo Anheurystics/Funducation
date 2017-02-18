@@ -32,27 +32,38 @@ textarea{
     resize: none;
 }
 
+.browse-search {
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+    margin: -30px -30px 30px -30px;
+    background-color: #f4fafd;
+    border-bottom: 2px solid lightgray;
+}
+
 input[type="search"]{
-    border: none;
-    border-bottom: 2px solid;
-    border-bottom-color: gray;
-    background-color: transparent;
-    -webkit-transition: border-bottom-color 500ms ease-out 0s;
-    -moz-transition: border-bottom-color 500ms ease-out 0s;
-    -o-trasition: border-bottom-color 500ms ease-out 0s;
-    transition: border-bottom-color 500ms ease-out 0s;
+    border: 2px solid lightgray;
+    margin-right: 20px;
+    border-radius: 2px;
+    padding-left: 15px;
+    background-color: #FFFFFF;
+    -webkit-transition: border-color 500ms ease-out 0s;
+    -moz-transition: border-color 500ms ease-out 0s;
+    -o-trasition: border-color 500ms ease-out 0s;
+    transition: border-color 500ms ease-out 0s;
 }
 
 input[type="search"]:focus{
-    border-bottom-color: #ff8138;
-    -webkit-transition: border-bottom-color 500ms ease-out 0s;
-    -moz-transition: border-bottom-color 500ms ease-out 0s;
-    -o-trasition: border-bottom-color 500ms ease-out 0s;
-    transition: border-bottom-color 500ms ease-out 0s;
+    border-color: #ff8138;
+    -webkit-transition: border-color 500ms ease-out 0s;
+    -moz-transition: border-color 500ms ease-out 0s;
+    -o-trasition: border-color 500ms ease-out 0s;
+    transition: border-color 500ms ease-out 0s;
 }
 
 input[type="submit"]{
     background-color: #ff8138;
+    font-size: 120%;
     border: none;
     padding: 5px 20px;
     border-radius: 3px;
@@ -147,6 +158,10 @@ input[type="submit"]:hover{
 .bottom {
     display: flex;
     background-color: lightgray;
+    align-items: center;
+    flex-direction: column;
+    font-size: 200%;
+    padding-top: 40px;
 }
 
 .button {
@@ -258,7 +273,6 @@ input[type="submit"]:hover{
     background-color: #ff8138;
     margin-top: 40px;
     text-align: center;
-    height:40px;
     width: 120px;
     border-radius: 3px;
     color: #000000;
@@ -291,10 +305,6 @@ input[type="submit"]:hover{
     flex-direction: row;
     margin-top: 0px;
     padding-top: 0px;
-}
-
-.principal_name {
-    
 }
 
 .footer{
