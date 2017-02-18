@@ -8,7 +8,7 @@ if (isset($_GET['q'])) {
 }
 
 ?>
-<form method="GET" action="<?php dirname(__FILE__) ?>/browse.php?q={$_GET['q']}">
+<form method="GET" action="./browse.php?q={$_GET['q']}">
 	<input type="search" name="q" value="" placeholder="Search...">
 	<input type="submit" name="" value="Search">
 </form>
