@@ -34,7 +34,7 @@ if(!empty($_POST))
                 }
                 else
                 {
-                    header("Location: ".$_SESSION['login_redirect'].".php");
+                    header("Location: ".$_SESSION['login_redirect']);
                     $_SESSION['login_redirect'] = NULL;
                 }
                 exit();
