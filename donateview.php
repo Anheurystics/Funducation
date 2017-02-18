@@ -17,7 +17,7 @@
                     <input type="radio" value"mode1"/>Bruh<br>
                     <input type="radio" value"mode2"/>Suh<br>
                 </div>
-                <div id="submit_button">Submit</div>
+                <a href="#"><div id="submit_button">Submit</div></a>
             </form>
         </div>
 
