@@ -45,4 +45,5 @@ if (isset($_GET['q'])) {
 			</div>
 		<?php } ?>
 		</div>
+		<?php } ?>
 <?php require('footer.php');?>
