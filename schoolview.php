@@ -15,22 +15,25 @@ if (isset($_GET['id'])) {
 
 <div class="schoolcontainer">
     <div id="schoolheader">
+        <img src="b0ss.png" />
     </div>
-    <div>
-        <h1 id="school_name"><?php echo $school['name'] ?></h1>
-    </div>
-    <div class="principal_row">
-        <p>Location:</p>
-        <p id="location_name" style="padding-left:10px"><?php echo $school['location'] ?></p>
-    </div>
-    <div class="principal_row">
-        <p class="principal_name">Principal:</p>
-        <p id="principal_name" style="padding-left:10px"><?php echo $principal['name'] ?></p>
+    <div class="school-info">
+        <div>
+            <h1 id="school_name"><?php echo $school['name'] ?></h1>
+        </div>
+        <div class="principal_row">
+            <p>Location:</p>
+            <p id="location_name" style="padding-left:10px"><?php echo $school['location'] ?></p>
+        </div>
+        <div class="principal_row">
+            <p class="principal_name">Principal:</p>
+            <p id="principal_name" style="padding-left:10px"><?php echo $principal['name'] ?></p>
+        </div>
     </div>
 
     <?php if ($get_projects) { ?>
     <div>
-        <h2>Projects</h2>
+        <h1>Projects</h1>
         <div class="results">
         <?php while($project = mysqli_fetch_array($get_projects)) {?>
             <div class="result">
