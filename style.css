@@ -173,6 +173,7 @@ right {
     display: flex;
     background-color: #e3e7ed;
     border-radius: 4px;
+    margin: 20px 0px;
 }
 
 .result-img{
