@@ -25,6 +25,17 @@ if (isset($_GET['id'])) {
         <div class="projnamediv">
             <p style="margin-top:0px; padding-right:20px font-size: 110%"><?php echo $project["description"] ?></p>
         </div>
+
+        <table>
+            <tr><th>Item</th><th>Amount Needed</th></tr>
+            <?php
+            $needs = mysqli_query($conn, "select * from project_needs where project_id=".$project['id']);
+            while($need = mysqli_fetch_assoc($needs))
+            {
+                ?><tr><td><?php echo $need["need"] ?></td><td><?php echo $need["price"] ?></td></tr><?php
+            }
+            ?>
+        </table>
     </div>
     <div class="project-profile-right-column">
         <div class="project-picture">
