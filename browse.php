@@ -67,7 +67,9 @@ if (isset($_GET['q'])) {
 				<?php if($project['collectedAmount'] == $project['goalAmount']) { ?>
 					<p>Accomplished</p>
 				<?php } else { ?>
-					<progress value="<?php echo $project['collectedAmount'] ?>" max="<?php echo $project['goalAmount'] ?>"></progress>
+					<?php $percentage = (($project['collectedAmount'] * 1.0) / $project['goalAmount']) * 100;
+					$percentage = round($percentage, 2)?>
+					<div class="progress-bar"><div class="progress-bar-fill" style="width:<?php echo $percentage . '%';?>"></div></div>
 					<p><?php echo $project['goalAmount'] - $project['collectedAmount'] ?> still needed</p>
 				<?php } ?>
 			</div>

@@ -53,7 +53,7 @@ input[type="search"]:focus{
 input[type="submit"]{
     background-color: #ff8138;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 20px;
     border-radius: 3px;
     font-family: 'Oswald', sans-serif;
     -webkit-transition: background-color 500ms ease-out 0s;
@@ -206,11 +206,17 @@ input[type="submit"]:hover{
 }
 
 .progress-bar{
-    background-color: #353638;
+    background-color: lightgray;
     border-radius: 10px;
     height: 10px;
     width: 100%;
     margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress-bar-fill{
+    background-color: orange;
+    height: 10px;
 }
 
 @media(max-width: 750px){
