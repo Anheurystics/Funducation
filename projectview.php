@@ -1,28 +1,27 @@
-<!DOCTYPE html>
+<?php include 'header.php'; ?>
 
-<html>
+        <div class="donatecontainer">
 
-    <body>
-    
-        <div>
-            <p>Project</p>
+            <div>
+                <p>Project</p>
+            </div>
+
+            <div>
+                <img src="b0ss.png" width="100px">
+            </div>
+            <div>
+                <h1 id="project_name">Project Name</h1>
+            </div>
+            <div class="principal_row">
+                <p>School:</p>
+                <p id="school" style="padding-left: 10px;">School Name</p>
+            </div>
+            <div>
+                <p style="margin: 0px;">Project Description:</p>
+                <p id="project_desc" style="text-align: center;">WE NEED MONEY</p>
+            </div>
+            <div id="submit_button" style="margin-top:0px;"><a href="donateview.php">Donate</a></div>
         </div>
-        
-        <div>
-            <img src="b0ss.png" width="100px">
-        </div>
-        <div>
-            <p id="project_name">Project Name</p>
-        </div>
-        <div>
-            <p>School:</p>
-            <p id="school">School Name</p>
-        </div>
-        <div>
-            <p>Project Description</p>
-            <p id="project_desc">WE NEED MONEY</p>
-        </div>
-        <button>Donate</button>
     </body>
     
 </html>
