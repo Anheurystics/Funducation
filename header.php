@@ -27,7 +27,7 @@ mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
             </left>
             
             <name>
-                TITLE OF APP
+                <a href="./">TITLE OF APP</a>
             </name>
             
             <right class="rightcontainer">
