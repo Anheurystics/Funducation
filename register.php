@@ -57,10 +57,10 @@ else
 <html>
     <body>
             <form action="" method="post">
-                <div style="text-align: center">
+                <div style="text-align: center; font-size:150%">
 
                     <div>
-                        <p style="font-size:300%">Sign Up</p>
+                        <p style="font-size:300%; margin:20px">Sign Up</p>
                     </div>                   
                     <div class="form-container">
                         <div>
@@ -81,14 +81,14 @@ else
                         </div>
                     </div>
                     <div>
-                        <p>Registering as:</p>
+                        <p style="margin: 10px">Registering as:</p>
                         <input type="radio" name="role" value="0" checked>Donor<br>
                         <input type="radio" name="role" value="1">Teacher<br>
                         <input type="radio" name="role" value="2">Principal<br> 
                     </div>
 
                     <div style="margin-top:40px">
-                        <input value="Register" type="submit">
+                        <input style ="font-size:150%" value="Register" type="submit">
                     </div>
                 </div>
             </form>

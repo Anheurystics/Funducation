@@ -57,10 +57,10 @@ else
 <html>
     <body>
         <form action="" method="post">
-            <div style="text-align:center">
+            <div style="text-align:center; font-size: 150%">
                 
                 <div>
-                    <p style="font-size: 300%">Login</p>
+                    <p style="font-size: 300%; margin:20px">Login</p>
                 </div>
                 
                 <div class="form-container">
@@ -75,7 +75,7 @@ else
                 </div>
 
                 <div style="margin-top:40px;">
-                    <input value="Login" type="submit">
+                    <input style="font-size:150%" value="Login" type="submit">
                 </div>
             </div>
         </form>

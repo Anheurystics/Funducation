@@ -23,7 +23,7 @@ mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
                 <a href="./">TITLE OF APP</a>
             </div>
             
-            <div class="rightcontainer">
+            <div class="rightcontainer" style="font-size:150%">
                 <?php 
                 if(empty($_SESSION['logged_in']) || empty($_SESSION['username'])) 
                 {
