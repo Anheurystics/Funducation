@@ -9,12 +9,12 @@ body {
 
 a {
     text-decoration: none;
-    color: #6e97ea;
+    color: #ff8138;
 }
 
 a:hover{
     text-decoration: none;
-    color: #4062a5;
+    color: #d16729;
 }
 
 .topcontainer {
@@ -64,13 +64,14 @@ right {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px 50px;
-    background-color: #ff3fd2;
+    background-color: #ff8138;
     color: #000000;
+    border-radius: 3px;
 }
 
 .browse:hover{
     cursor: pointer;
-    background-color: #ad2d8f;
+    background-color: #d16729;
     color: #FFFFFF;
 }
 
@@ -118,4 +119,23 @@ right {
     height: 10px;
     width: 100%;
     margin: 10px 0;
+}
+
+.donatecontainer {
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#donate {
+    
+    font-size: 200%;   
+}
+
+#submit_button {
+    
+    background-color: darkgray;
+    margin-top: 40px;
+    text-align: center;
 }
