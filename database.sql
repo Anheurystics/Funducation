@@ -46,12 +46,12 @@ create table projects (
     foreign key (school_id) references schools(id)
 );
 
-create table project_teacher (
+create table project_needs (
     id int not null primary key auto_increment,
     project_id int,
-    teacher_id int,
-    foreign key (project_id) references projects(id),
-    foreign key (teacher_id) references teachers(id)
+    need varchar(255),
+    price decimal,
+    foreign key (project_id) references projects(id)
 );
 
 create table project_donor (
@@ -68,6 +68,7 @@ create table school_teacher (
     id int not null primary key auto_increment,
     school_id int,
     teacher_id int,
+    pending int,
     foreign key (school_id) references schools(id),
     foreign key (teacher_id) references teachers(id)
 );
