@@ -10,8 +10,8 @@ if (isset($_GET['id'])) {
     exit();
 }
 ?>
-<div style="display:flex; flex-direction: row; font-size:150%">
-    <div style="flex:3; padding-top:10px">
+<div class="project-profile">
+    <div class="project-description">
         <div class="projnamediv">
             <h1 id="project_name"><?php echo $project["name"] ?></h1>
         </div>
@@ -25,29 +25,30 @@ if (isset($_GET['id'])) {
         <div class="projnamediv">
             <p style="margin-top:0px; padding-right:20px font-size: 110%"><?php echo $project["description"] ?></p>
         </div>
-
-        <div class="projnamediv">
-            <p style="margin: 0px; font-size: 120%">Project Goal: <?php echo $project["goalAmount"] ?></p>
+    </div>
+    <div class="project-profile-right-column">
+        <div class="project-picture">
+            <img src="b0ss.png" width=100%; height=auto; style="border-radius: 25px;">
         </div>
-
-        <div class="projnamediv">
-            <?php if($project['collectedAmount'] == $project['goalAmount']) { ?>
-                    <p>Accomplished</p>
-            <?php } else { ?>
-                <?php $percentage = (($project['collectedAmount'] * 1.0) / $project['goalAmount']) * 100;
-                $percentage = round($percentage, 2)?>
-                <div class="progress-bar"><div class="progress-bar-fill" style="width:<?php echo $percentage . '%';?>"></div></div>
-                <p><?php echo $project['goalAmount'] - $project['collectedAmount'] ?> still needed</p>
+        <div class="project-donate" style="flex:1">
+            <div class="projnamediv">
+                <h1 style="margin-top: 0px">Project Goal: <?php echo "₱" . $project["goalAmount"] ?></h1>
+            </div>
+            <div class="projnamediv">
+                <?php if($project['collectedAmount'] == $project['goalAmount']) { ?>
+                        <p>Accomplished</p>
+                <?php } else { ?>
+                    <?php $percentage = (($project['collectedAmount'] * 1.0) / $project['goalAmount']) * 100;
+                    $percentage = round($percentage, 2)?>
+                    <div class="progress-bar"><div class="progress-bar-fill" style="width:<?php echo $percentage . '%';?>"></div></div>
+                    <p><?php echo "₱" . ($project['goalAmount'] - $project['collectedAmount']) ?> still needed</p>
+                <?php } ?>
+            </div>
+            <?php if(empty($_SESSION['logged_in']) || ($_SESSION['logged_in'] == 0 || $_SESSION['role'] == 'donors')) { ?>
+            <a href="<?php echo "donateview.php?id=".$project['id'] ?>"><div id="submit_button" style="margin-top:10px; margin-left:10px;">Donate</div></a>
             <?php } ?>
         </div>
-        <?php if(empty($_SESSION['logged_in']) || ($_SESSION['logged_in'] == 0 || $_SESSION['role'] == 'donors')) { ?>
-        <a href="<?php echo "donateview.php?id=".$project['id'] ?>"><div id="submit_button" style="margin-top:10px; margin-left:10px;">Donate</div></a>
-        <?php } ?>
-    </div>
-    
-    <div style="display:flex; flex: 2; margin: 10px; align-items:center;">
-        <img src="b0ss.png" width=100%; height=auto; style="border-radius: 25px;">
     </div>
 </div>
-    
+
 <?php require('footer.php'); ?>
