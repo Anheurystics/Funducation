@@ -58,6 +58,10 @@ right {
     position: relative;
 }
 
+.front-page-pic img{
+    display: flex;
+}
+
 .browse{
     position: absolute;
     top: 70%;
@@ -138,4 +142,11 @@ right {
     background-color: darkgray;
     margin-top: 40px;
     text-align: center;
+}
+
+.footer{
+    background-color: #333333;
+    color: #FFFFFF;
+    line-height: 50px;
+    padding: 10px 20px;
 }
