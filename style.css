@@ -58,6 +58,10 @@ right {
     position: relative;
 }
 
+.front-page-pic img{
+    display: flex;
+}
+
 .browse{
     position: absolute;
     top: 70%;
@@ -165,4 +169,11 @@ right {
 #principal_name {
     
     padding-left: 10px;
+}
+
+.footer{
+    background-color: #333333;
+    color: #FFFFFF;
+    line-height: 50px;
+    padding: 10px 20px;
 }
