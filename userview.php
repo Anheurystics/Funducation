@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php require('header.php'); ?>
 
         <div class="schoolcontainer">
             <div>
@@ -21,6 +21,5 @@
                 <p>Bruh bruh bruh</p>
             </div>
         </div>
-    </body>
-    
-</html>
+
+<?php require('footer.php'); ?>

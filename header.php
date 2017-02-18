@@ -52,3 +52,5 @@ mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
                 ?>
             </right>
         </top>
+
+        <div class="main-content">
