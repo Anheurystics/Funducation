@@ -153,7 +153,7 @@ input[type="submit"]:hover{
 }
 
 .form-container {
-    max-width: 300px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
@@ -242,6 +242,7 @@ input[type="submit"]:hover{
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-size: 150%;
          
 }
 
@@ -254,8 +255,8 @@ input[type="submit"]:hover{
     background-color: #ff8138;
     margin-top: 40px;
     text-align: center;
-    height:25px;
-    width: 100px;
+    height:40px;
+    width: 120px;
     border-radius: 3px;
     color: #000000;
     -webkit-transition: background-color 500ms ease-out 0s;

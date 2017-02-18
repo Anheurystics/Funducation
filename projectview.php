@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
     exit();
 }
 ?>
-<div style="display:flex; flex-direction: row">
+<div style="display:flex; flex-direction: row; font-size:150%">
     <div style="flex:3; padding-top:10px">
         <div class="projnamediv">
             <h1 id="project_name"><?php echo $project["name"] ?></h1>

@@ -30,7 +30,7 @@ if (isset($_GET['id'])) {
 
     <?php if ($get_projects) { ?>
     <div>
-        <p style="font-size:200%;">Projects</p>
+        <p style="font-size:150%;">Projects</p>
         <div class="results">
         <?php while($project = mysqli_fetch_array($get_projects)) {?>
             <div class="result">
