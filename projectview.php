@@ -34,7 +34,7 @@ if (isset($_GET['id'])) {
             <?php $percentage = (($project['collectedAmount'] * 1.0) / $project['goalAmount']) * 100;
             $percentage = round($percentage, 2)?>
             <div class="progress-bar"><div class="progress-bar-fill" style="width:<?php echo $percentage . '%';?>"></div></div>
-            <p><?php echo $project['goalAmount'] - $project['collectedAmount'] ?> still needed</p>
+            <p style="margin-top:0px"><?php echo $project['goalAmount'] - $project['collectedAmount'] ?> still needed</p>
         </div>
         <?php if(empty($_SESSION['logged_in']) || ($_SESSION['logged_in'] == 0 || $_SESSION['role'] == 'donors')) { ?>
         <a href="<?php echo "donateview.php?id=".$project['id'] ?>"><div id="submit_button" style="margin-top:10px; margin-left:10px;">Donate</div></a>
