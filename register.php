@@ -28,7 +28,7 @@ if(!empty($_POST))
         }
         else
         {
-           
+           echo 'Username does not exist in our database!';
         }
     }
     else
