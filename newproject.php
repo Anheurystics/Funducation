@@ -49,16 +49,14 @@ if (isset($_GET['school'])) {
 		
 		<div class="form-container">
 			<div>
-				<label for="name">Name</label>
-				<input class="inputthing" name="name" type="text">
+				<input class="inputthing" name="name" type="text" placeholder="Project Name" />
 			</div>
 			<div>
-				<label for="description">Description</label>
-				<textarea class="inputthing" name="description"></textarea>
+				<textarea class="inputthing" name="description" placeholder="Description"></textarea>
 			</div>
-			<div>
-				<label for="image">Project Image</label>
-				<input class="inputthing" type="file" name="image">
+			<div style="flex-direction:column">
+				<label for="image" style="margin-bottom:20px">Project Image</label>
+				<input type="file" name="image">
 			</div>
 			<ul id="items" style="list-style:none;">
 			</ul>
@@ -97,7 +95,7 @@ if (isset($_GET['school'])) {
 		var del = document.createElement('input');
 		del.setAttribute('type', 'button');
 		del.setAttribute('class', 'inputthing');
-		del.setAttribute('value', 'remove');
+		del.setAttribute('value', 'Remove');
 		newLi.appendChild(newName);
 		newLi.appendChild(newPrice);
 		newLi.appendChild(del);

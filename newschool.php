@@ -28,16 +28,14 @@ if (isset($_GET['principal'])) {
 		
 		<div class="form-container">
 			<div>
-				<label for="name">Name</label>
-				<input class="inputthing" name="name" type="text">
+				<input class="inputthing" name="name" type="text" placeholder="Name">
 			</div>
 			<div>
-				<label for="location">Location</label>
-				<input class="inputthing" name="location" type="text">
+				<input class="inputthing" name="location" type="text" placeholder="Location">
 			</div>
-			<div>
-				<label for="image">School Image</label>
-				<input class="inputthing" type="file" name="image">
+			<div style="flex-direction: column">
+				<label for="image" style="margin-bottom:20px">School Image</label>
+				<input type="file" name="image">
 			</div>
 		</div>
 
