@@ -49,7 +49,7 @@ if (isset($_GET['school'])) {
 		
 		<div class="form-container">
 			<div>
-				<input class="inputthing" name="name" type="text" placeholder="Project Name" />
+				<input class="inputthing" name="name" type="text" placeholder="Project Name" autofocus/>
 			</div>
 			<div>
 				<textarea class="inputthing" name="description" placeholder="Description"></textarea>

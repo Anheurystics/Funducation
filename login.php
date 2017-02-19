@@ -69,7 +69,7 @@ else
 
                     <div class="form-container">
                         <div>
-                            <input class="inputthing" name="username" type="text" placeholder="Username">
+                            <input class="inputthing" name="username" type="text" placeholder="Username" autofocus>
                         </div>
                         <div>
                             <input class="inputthing" name="password" type="password" placeholder="Password">

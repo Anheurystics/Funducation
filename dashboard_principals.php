@@ -8,7 +8,7 @@
 if($school)
 {
     ?>
-    <h2>Your Projects for <?php echo $school["name"] ?></h2>
+    <h2>Your Projects for <a href="./schoolview.php?id=<?php echo $school['id'] ?>"><?php echo $school["name"] ?></a></h2>
     <a href="<?php echo "newproject.php?school=".$school['id'] ?>"><div id="submit_button" style="margin-top:10px; margin-left:10px; display: inline-block">New Project</div></a>
     <?php
     if($projects)
