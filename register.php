@@ -2,12 +2,14 @@
 <?php
 include "header.php";
 
+// check if user is taken in a cerstain table
 function checktableuser($conn, $tablename, $username)
 {
     $query = sprintf("select * from %s where name='%s'", $tablename, $username);
     return mysqli_num_rows(mysqli_query($conn, $query));
 }
 
+// validate user if POST, else if logged in, redirect to index page
 if(!empty($_POST))
 {
     if(!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['confirm']))

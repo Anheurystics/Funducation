@@ -1,5 +1,6 @@
 <?php require('header.php');
 
+// searches in schools and projects if q is set else, get all
 if (isset($_GET['q'])) {
 	$query = "select * from projects where upper(name) like upper('%". $_GET['q'] . "%')";
 	$get_projects = mysqli_query($conn, $query);
@@ -13,14 +14,16 @@ if (isset($_GET['q'])) {
 	$query = "select * from schools";
 	$get_schools = mysqli_query($conn, $query);
 }
-
 ?>
+
 <form class="browse-search" method="GET" action="./browse.php?q={$_GET['q']}">
 	<input type="search" name="q" value="" placeholder="Search...">
 	<input type="submit" name="" value="Search">
 </form>
 
-<?php if ($get_schools) { ?>
+<?php
+// if there are results for schools, loop through and format it
+if ($get_schools) { ?>
 	<div>
 		<h1>Schools</h1>
 	</div>
@@ -44,7 +47,9 @@ if (isset($_GET['q'])) {
 	</div>
 <?php } ?>
 
-<?php if ($get_projects) { ?>
+<?php
+// if there are results for projects, loop through and format it
+if ($get_projects) { ?>
 	<div>
 		<h1>Projects</h1>
 	</div>

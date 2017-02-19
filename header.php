@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <?php
+// include file with db credentials
 include "../bh2017.php";
 
 session_start();
-
+// connect to mysql
 $conn = mysqli_connect($mysql_host, $mysql_username, $mysql_password) or die("MySQL error: " . mysqli_connect_error());
 mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
 ?>  
 <html>
-
     <head>
-        
         <link rel="stylesheet" type="text/css" href="style.css">
-        
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     </head>
 
     <body>
-        <nav class="topcontainer">
-                    
+        <nav class="topcontainer">   
             <div class="site-title">
                 <a href="./">FUNDUCATION</a>
             </div>
-            
             <div class="rightcontainer" style="font-size:150%">
-                <?php 
+                <?php
+                // show login and signup links if not logged in
                 if(empty($_SESSION['logged_in']) || empty($_SESSION['username'])) 
                 {
                     ?>

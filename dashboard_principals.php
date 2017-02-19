@@ -1,10 +1,12 @@
 <?php    
+    // get principal, school, and projects from principal id
     $principal = mysqli_fetch_assoc(mysqli_query($conn, sprintf("select * from principals where id=%d;", $_SESSION['id'])));
     $projects = mysqli_query($conn, sprintf("select * from projects where school_id=%d;", $principal['school_id']));
     $school = mysqli_fetch_assoc(mysqli_query($conn, sprintf("select * from schools where id=%d;", $principal['school_id'])));
 ?>
 <h1>Principal Dashboard</h1>
 <?php
+// if principal has school, loop though its projects, else show registration for school
 if($school)
 {
     ?>

@@ -1,5 +1,6 @@
 <?php require('header.php');
 
+// get school, principal, projects if id is set, else redirect to index page
 if (isset($_GET['id'])) {
     $query = "select * from schools where id='" . $_GET['id'] . "'";
     $school = mysqli_fetch_assoc(mysqli_query($conn, $query));
@@ -31,7 +32,9 @@ if (isset($_GET['id'])) {
         </div>
     </div>
 
-    <?php if ($get_projects) { ?>
+    <?php
+    // if there are projects, loop through and format
+    if ($get_projects) { ?>
     <div>
         <h1>Projects</h1>
         <div class="results">
