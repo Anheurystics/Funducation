@@ -26,7 +26,7 @@ if (isset($_GET['id'])) {
             <p style="margin-top:0px; padding-right:20px font-size: 110%"><?php echo $project["description"] ?></p>
         </div>
 
-        <table>
+        <table style="table-layout: fixed; width: 100%; text-align:center; vertical-align:middle;">
             <tr><th>Item</th><th>Amount Needed</th></tr>
             <?php
             $needs = mysqli_query($conn, "select * from project_needs where project_id=".$project['id']);
