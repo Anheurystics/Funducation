@@ -81,10 +81,3 @@ create table files (
     pathname varchar(255),
     foreign key (school_id) references schools(id)
 );
-
-insert into schools (name, location) values ("ABC school", "here"), ("XYZ Elementary", "there");
-insert into projects (name, school_id, description, collectedAmount, goalAmount) values ("ABC project 1", 1, "This is ABC's project 1.", 10000, 100000), ("ABC project 2", 1, "This is ABC's project 2.", 2000, 50000), ("XYZ project 1", 2, "This is XYZ's project 1.", 4000, 100000);
-insert into principals (name, email, password, school_id) values ("p", "abc@email.com", "pabc", 1);
-update schools set principal_id=1 where id=1;
-
-insert into donors (name, email, password) values ("user", "user@user.com", "pass");

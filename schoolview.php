@@ -47,7 +47,7 @@ if(isset($_POST['submit-file']))
             <?php while($project = mysqli_fetch_array($get_projects)) {?>
                 <div class="result">
                     <div class="result-img">
-                        <img src="pic.jpg"/>
+                        <img src="./static/<?php echo $project['image_path'] ?>"/>
                     </div>
                     <div class="result-text">
                         <div class="title">
@@ -78,7 +78,7 @@ if(isset($_POST['submit-file']))
     
     <div style="flex:1">
         <div id="schoolheader">
-            <img src="b0ss.png" />
+            <img src="./static/<?php echo $school['image_path'] ?>"/>
         </div>
 
         <?php if((isset($_SESSION['role']) && $_SESSION['role'] != 'principals') || !isset($_SESSION['role'])) { ?>
@@ -94,7 +94,7 @@ if(isset($_POST['submit-file']))
             <h1>Deposited Files</h1>
             <?php
             $files = mysqli_query($conn, "select * from files where school_id=".$_GET['id']);
-            if(mysqli_num_rows($files) > 0)
+            if($files)
             {
                 while($file = mysqli_fetch_assoc($files))
                 {
