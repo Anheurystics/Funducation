@@ -3,7 +3,11 @@ include "header.php";
 
 if (isset($_GET['principal'])) {
 	if (isset($_POST['submit'])) {
-		$query = sprintf("insert into schools (name, location, principal_id) values ('%s', '%s', %d)", $_POST['name'], $_POST['location'], $_GET['principal']);
+		$info = pathinfo($_FILES['image']['name']);
+		$newname = hash("md5", $info['filename']) . "." . $info['extension'];
+		move_uploaded_file($_FILES['image']['tmp_name'], './static/'.$newname);
+		
+		$query = sprintf("insert into schools (name, location, principal_id, image_path) values ('%s', '%s', %d, '%s')", $_POST['name'], $_POST['location'], $_GET['principal'], $newname);
 		mysqli_query($conn, $query);
 		$insert_id = mysqli_insert_id($conn);
 		mysqli_query($conn, sprintf("update principals set school_id=%d where id=%d", $insert_id, $_SESSION['id']));
@@ -12,6 +16,7 @@ if (isset($_GET['principal'])) {
             header("Location: dashboard.php");
             exit();
         }
+		
 	}
 } else {
 	header("Location: browse.php");
@@ -19,7 +24,7 @@ if (isset($_GET['principal'])) {
 }
 
 ?>
-<form action="" method="post" enc="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data">
 	<div style="text-align:center; font-size: 130%">
 		
 		<div>

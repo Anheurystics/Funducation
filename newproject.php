@@ -2,8 +2,12 @@
 include "header.php";
 
 if (isset($_GET['school'])) {
-	if (isset($_POST['submit'])) {		
-		$query = sprintf("insert into projects (name, school_id, description, goalAmount) values ('%s', %d, '%s', %d)", $_POST['name'], $_GET['school'], $_POST['description'], 0);
+	if (isset($_POST['submit'])) {
+		$info = pathinfo($_FILES['image']['name']);
+		$newname = hash("md5", $info['filename']) . "." . $info['extension'];
+		move_uploaded_file($_FILES['image']['tmp_name'], './static/'.$newname);
+
+		$query = sprintf("insert into projects (name, school_id, description, goalAmount, image_path) values ('%s', %d, '%s', %d, '%s')", $_POST['name'], $_GET['school'], $_POST['description'], 0, $newname);
 		mysqli_query($conn, $query);
 		$insert_id = mysqli_insert_id($conn);
 		$need_insert = "insert into project_needs (project_id, need, price) values";
@@ -40,7 +44,7 @@ if (isset($_GET['school'])) {
 
 
 ?>
-<form action="" method="post" enc="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data">
 	<div style="text-align:center; font-size: 130%">
 		
 		<div>

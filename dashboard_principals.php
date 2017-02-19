@@ -18,7 +18,7 @@ if($school)
             ?>
             <div class="result">
                 <div class="result-img">
-                    <img src="pic.jpg"/>
+                    <img src="./static/<?php echo $project['image_path'] ?>"/>
                 </div>
                 <div class="result-text">
                     <div class="title">

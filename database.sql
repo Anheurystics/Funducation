@@ -21,7 +21,8 @@ create table schools (
     id int not null primary key auto_increment,
     name varchar(255),
     location varchar(255),
-    principal_id int
+    principal_id int,
+    image_path varchar(255)
 );
 
 create table teachers (
@@ -43,6 +44,7 @@ create table projects (
     description varchar(255),
     collectedAmount decimal default 0,
     goalAmount decimal,
+    image_path varchar(255),
     foreign key (school_id) references schools(id)
 );
 
