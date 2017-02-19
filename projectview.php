@@ -32,7 +32,7 @@ if (isset($_GET['id'])) {
             $needs = mysqli_query($conn, "select * from project_needs where project_id=".$project['id']);
             while($need = mysqli_fetch_assoc($needs))
             {
-                ?><tr><td><?php echo $need["need"] ?></td><td><?php echo $need["price"] ?></td></tr><?php
+                ?><tr><td><?php echo $need["need"] ?></td><td><?php echo "₱" . $need["price"] ?></td></tr><?php
             }
             ?>
         </table>
