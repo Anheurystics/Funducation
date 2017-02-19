@@ -84,6 +84,24 @@ input[type="submit"]:hover{
     transition: background-color 500ms ease-out 0s;
 }
 
+input[type="button"]{
+    background-color: #5487d8;
+    -webkit-transition: background-color 500ms ease-out 0s;
+    -moz-transition: background-color 500ms ease-out 0s;
+    -o-trasition: background-color 500ms ease-out 0s;
+    transition: background-color 500ms ease-out 0s;
+}
+
+input[type="button"]:hover{
+    cursor: pointer;
+    background-color: #4286f4;
+    color: #FFFFFF;
+    -webkit-transition: background-color 500ms ease-out 0s;
+    -moz-transition: background-color 500ms ease-out 0s;
+    -o-trasition: background-color 500ms ease-out 0s;
+    transition: background-color 500ms ease-out 0s;
+}
+
 *:focus{
     outline: none;
 }
@@ -117,7 +135,6 @@ input[type="submit"]:hover{
 }
 
 .site-title {
-    flex: 1;
     font-size: 220%;
     margin-left: 20px;
 }
@@ -307,6 +324,7 @@ input[type="submit"]:hover{
 
 #submit_button {
     background-color: #ff8138;
+    padding: 10px 20px;
     margin-top: 40px;
     text-align: center;
     width: auto;
@@ -455,4 +473,8 @@ input[type="submit"]:hover{
     .project-profile-right-column{
         margin: 0px;
     }
+}
+
+#items {
+    padding-left: 0px;
 }
