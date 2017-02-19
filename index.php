@@ -11,7 +11,7 @@
 
             <div style="flex:2" class="bottom">
                 <p style="margin-bottom:10px">About us</p>
-                <p style="font-size:70%; margin-top:0px; text-align:center">Title of App is a crowdfunding web app that helps schools get the resources they need to improve its facilities</p>
+                <p style="font-size:70%; margin-top:0px; text-align:center">Funducation is a crowdfunding web app that helps schools get the resources they need to improve its facilities</p>
             </div>
 
             <div style="flex:1"></div>
