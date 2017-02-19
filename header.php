@@ -20,7 +20,7 @@ mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
         <nav class="topcontainer">
                     
             <div class="site-title">
-                <a href="./">TITLE OF APP</a>
+                <a href="./">FUNDUCATION</a>
             </div>
             
             <div class="rightcontainer" style="font-size:150%">
