@@ -1,5 +1,4 @@
 <?php require('header.php');
-
 // get school, principal, projects if id is set, else redirect to index page
 if (isset($_GET['id'])) {
     $query = "select * from schools where id='" . $_GET['id'] . "'";
@@ -11,6 +10,13 @@ if (isset($_GET['id'])) {
 } else {
     header("Location: index.php");
     exit();
+}
+
+if(isset($_POST['submit-file']))
+{
+    $info = pathinfo($_FILES['file-deposit']['name']);
+    move_uploaded_file($_FILES['file-deposit']['tmp_name'], './static/'.$info['basename']);
+    mysqli_query($conn, sprintf("insert into files (school_id, pathname) values (%d, '%s')", $_GET['id'], $info['basename']));
 }
 ?>
 
@@ -75,13 +81,35 @@ if (isset($_GET['id'])) {
             <img src="b0ss.png" />
         </div>
 
+        <?php if((isset($_SESSION['role']) && $_SESSION['role'] != 'principals') || !isset($_SESSION['role'])) { ?>
+        <form action="" enctype="multipart/form-data" method="post">
+            <div style="margin-left:20px; margin-top:10px; padding: 0px 20px 20px 20px;" class="school-info">
+                <h1>Donate Materials</h1>
+                <input name="file-deposit" type="file">
+                <input type="submit" name="submit-file" value="Deposit File">
+            </div>
+        </form>
+        <?php } else { ?>
         <div style="margin-left:20px; margin-top:10px; padding: 0px 20px 20px 20px;" class="school-info">
-            <h1>Donate Materials</h1>
-            <p style="font-size:150%;">Choose file:</p>
-            <div id="submit_button">Donate</div>
+            <h1>Deposited Files</h1>
+            <?php
+            $files = mysqli_query($conn, "select * from files where school_id=".$_GET['id']);
+            if(mysqli_num_rows($files) > 0)
+            {
+                while($file = mysqli_fetch_assoc($files))
+                {
+                    $pathname = $file['pathname'];
+                    echo "<p><a href='./static/{$pathname}'>{$pathname}</a></p>";
+                }
+            }
+            else
+            {
+                echo "<p>No deposited files so far!</p>";
+            }
+            ?>
+            <?php } ?>
         </div>
     </div>
-    
 </div>
 
 <?php require('footer.php'); ?>
