@@ -15,7 +15,7 @@ if (isset($_GET['id'])) {
 if(isset($_POST['submit-file']))
 {
     $info = pathinfo($_FILES['file-deposit']['name']);
-    move_uploaded_file($_FILES['file-deposit']['tmp_name'], './static/'.$info['basename']);
+    move_uploaded_file($_FILES['file-deposit']['tmp_name'], './uploads/'.$info['basename']);
     mysqli_query($conn, sprintf("insert into files (school_id, pathname) values (%d, '%s')", $_GET['id'], $info['basename']));
 }
 ?>
@@ -47,7 +47,7 @@ if(isset($_POST['submit-file']))
             <?php while($project = mysqli_fetch_array($get_projects)) {?>
                 <div class="result">
                     <div class="result-img">
-                        <img src="./static/<?php echo $project['image_path'] ?>"/>
+                        <img src="./uploads/<?php echo $project['image_path'] ?>"/>
                     </div>
                     <div class="result-text">
                         <div class="title">
@@ -78,7 +78,7 @@ if(isset($_POST['submit-file']))
     
     <div style="flex:1">
         <div id="schoolheader">
-            <img src="./static/<?php echo $school['image_path'] ?>"/>
+            <img src="./uploads/<?php echo $school['image_path'] ?>"/>
         </div>
 
         <?php if((isset($_SESSION['role']) && $_SESSION['role'] != 'principals') || !isset($_SESSION['role'])) { ?>
@@ -99,7 +99,7 @@ if(isset($_POST['submit-file']))
                 while($file = mysqli_fetch_assoc($files))
                 {
                     $pathname = $file['pathname'];
-                    echo "<p><a href='./static/{$pathname}'>{$pathname}</a></p>";
+                    echo "<p><a href='./uploads/{$pathname}'>{$pathname}</a></p>";
                 }
             }
             else

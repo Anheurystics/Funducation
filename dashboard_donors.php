@@ -14,7 +14,7 @@ if($donations)
         ?>
         <div class="result">
             <div class="result-img">
-				<img src="./static/<?php echo $project['image_path'] ?>"/>
+				<img src="./uploads/<?php echo $project['image_path'] ?>"/>
             </div>
             <div class="result-text">
                 <div class="title">

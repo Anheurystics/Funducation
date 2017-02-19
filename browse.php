@@ -31,7 +31,7 @@ if ($get_schools) { ?>
 	<?php while ($school = mysqli_fetch_array($get_schools)) {?>
 		<div class="result">
 			<div class="result-img">
-				<img src="./static/<?php echo $school['image_path'] ?>"/>
+				<img src="./uploads/<?php echo $school['image_path'] ?>"/>
 			</div>
 			<div class="result-text">
 				<div class="title">
@@ -57,7 +57,7 @@ if ($get_projects) { ?>
 	<?php while($project = mysqli_fetch_array($get_projects)) {?>
 		<div class="result">
 			<div class="result-img">
-				<img src="./static/<?php echo $project['image_path'] ?>"/>
+				<img src="./uploads/<?php echo $project['image_path'] ?>"/>
 			</div>
 			<div class="result-text">
 				<div class="title">

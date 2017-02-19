@@ -5,10 +5,10 @@ include "header.php";
 if (isset($_GET['principal'])) {
 	//If POST, create school and redirect to dashboard, else redirect to browse page\
 	if (isset($_POST['submit'])) {
-		// save image to /static/
+		// save image to /uploads/
 		$info = pathinfo($_FILES['image']['name']);
 		$newname = hash("md5", $info['filename']) . "." . $info['extension'];
-		move_uploaded_file($_FILES['image']['tmp_name'], './static/'.$newname);
+		move_uploaded_file($_FILES['image']['tmp_name'], './uploads/'.$newname);
 		
 		$query = sprintf("insert into schools (name, location, principal_id, image_path) values ('%s', '%s', %d, '%s')", $_POST['name'], $_POST['location'], $_GET['principal'], $newname);
 		mysqli_query($conn, $query);

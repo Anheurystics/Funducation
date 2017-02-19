@@ -10,7 +10,7 @@ mysqli_select_db($conn, "bh2017") or die("MySQL error: " . mysqli_error($conn));
 ?>  
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="./styles/style.css">
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     </head>
 

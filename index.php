@@ -1,7 +1,7 @@
 <?php require('header.php'); ?>
 	<div class="home-wrapper">
         <div class="front-page-pic">
-        	<img src="b0ss.png" width=100%/>
+        	<img src="images/landing_bg.png" width=100%/>
             <h1 style="transform: translate(-50%, -50%); position:absolute; top: 40%; left: 50%; color: white; font-size:400%; text-align:center">Help build our future by supporting our schools in need</h1>
         </div>
 

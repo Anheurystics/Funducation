@@ -5,10 +5,10 @@ include "header.php";
 if (isset($_GET['school'])) {
 	//If POST, create new project and list of needs for project
 	if (isset($_POST['submit'])) {
-		// save image to /static/
+		// save image to /uploads/
 		$info = pathinfo($_FILES['image']['name']);
 		$newname = hash("md5", $info['filename']) . "." . $info['extension'];
-		move_uploaded_file($_FILES['image']['tmp_name'], './static/'.$newname);
+		move_uploaded_file($_FILES['image']['tmp_name'], './uploads/'.$newname);
 
 		$query = sprintf("insert into projects (name, school_id, description, goalAmount, image_path) values ('%s', %d, '%s', %d, '%s')", $_POST['name'], $_GET['school'], $_POST['description'], 0, $newname);
 		mysqli_query($conn, $query);
