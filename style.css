@@ -188,7 +188,11 @@ input[type="submit"]:hover{
 
 .bottom {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: lightgray;
+    padding: 40px;
+    font-size: 300%;
 }
 
 .button {
