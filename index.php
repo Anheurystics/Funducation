@@ -5,7 +5,7 @@
         	<a href="browse.php"><div class="browse" style="font-size:200%;">Browse</div></a>
         </div>
 
-        <div style="display:flex; flex-direction: row; background-color:lightgray;">
+        <div class="about">
         
             <div style="flex:1"></div>
 

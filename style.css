@@ -203,11 +203,21 @@ input[type="button"]:hover{
     transition: background-color 500ms ease-out 0s;
 }
 
+.about{
+    display:flex; 
+    flex-direction: row;
+}
+
+@media(max-width: 700px){
+    .about{
+        flex-direction: column;
+    }
+}
+
 .bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: lightgray;
     padding: 40px;
     font-size: 300%;
 }
