@@ -63,7 +63,7 @@ if (isset($_GET['id'])) {
         <?php } ?>
         </div>
     <?php } ?>
-</div>
+    </div>
 </div>
 
 <?php require('footer.php'); ?>

@@ -54,45 +54,43 @@ else
     }
 }
 ?>
-<html>
-    <body>
-            <form action="" method="post">
-                <div class="login-register-container">
 
-                    <div style="flex:2"></div>
+<form action="" method="post">
+    <div class="login-register-container">
 
-                    <div class="login-register-shape">
+        <div style="flex:2"></div>
 
-                        <div>
-                            <p style="font-size:300%; margin:20px">Sign Up</p>
-                        </div>                   
-                        <div class="form-container">
-                            <div>
-                                <input class="inputthing" name="username" type="text" placeholder="Username" autofocus>
-                            </div>
-                            <div>
-                                <input class="inputthing" name="email" type="text" placeholder="E-mail">
-                            </div>
-                            <div>
-                                <input class="inputthing" name="password" type="password" placeholder="Password">
-                            </div>
-                            <div>
-                                <input class="inputthing" name="confirm" type="password" placeholder="Confirm Password">
-                            </div>
-                        </div>
-                        <div style="font-size: 123%;">
-                            <p style="margin: 10px">Registering as:</p>
-                            <label><input type="radio" name="role" value="0" checked>Donor<br></label>
-                            <label><input type="radio" name="role" value="2">Principal<br></label>
-                        </div>
+        <div class="login-register-shape">
 
-                        <div style="margin-top:40px">
-                            <input style ="font-size:150%; margin-bottom:40px" value="Register" type="submit">
-                        </div>
-                    </div>
-
-                    <div style="flex:2"></div>
+            <div>
+                <p style="font-size:300%; margin:20px">Sign Up</p>
+            </div>                   
+            <div class="form-container">
+                <div>
+                    <input class="inputthing" name="username" type="text" placeholder="Username" autofocus>
                 </div>
-            </form>
-    </body>
-</html>
+                <div>
+                    <input class="inputthing" name="email" type="text" placeholder="E-mail">
+                </div>
+                <div>
+                    <input class="inputthing" name="password" type="password" placeholder="Password">
+                </div>
+                <div>
+                    <input class="inputthing" name="confirm" type="password" placeholder="Confirm Password">
+                </div>
+            </div>
+            <div style="font-size: 123%;">
+                <p style="margin: 10px">Registering as:</p>
+                <label><input type="radio" name="role" value="0" checked>Donor<br></label>
+                <label><input type="radio" name="role" value="2">Principal<br></label>
+            </div>
+
+            <div style="margin-top:40px">
+                <input style ="font-size:150%; margin-bottom:40px" value="Register" type="submit">
+            </div>
+        </div>
+
+        <div style="flex:2"></div>
+    </div>
+</form>
+<?php require('footer.php'); ?>

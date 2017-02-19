@@ -55,36 +55,33 @@ else
     }
 }
 ?>
-<html>
-    <body>
-        <form action="" method="post">
-            <div class="login-register-container">
-                <div style="flex:2"></div>
-                
-                <div class="login-register-shape">
-                
-                    <div>
-                        <p style="font-size: 300%; margin:20px">Login</p>
-                    </div>
 
-                    <div class="form-container">
-                        <div>
-                            <input class="inputthing" name="username" type="text" placeholder="Username" autofocus>
-                        </div>
-                        <div>
-                            <input class="inputthing" name="password" type="password" placeholder="Password">
-                        </div>
-                    </div>
-
-                    <div style="margin-top:40px; margin-bottom: 40px;">
-                        <input style="font-size:150%" value="Login" type="submit">
-                    </div>
-                </div>
-                
-                <div style="flex:2"></div>
-                
+<form action="" method="post">
+    <div class="login-register-container">
+        <div style="flex:2"></div>
+        
+        <div class="login-register-shape">
+        
+            <div>
+                <p style="font-size: 300%; margin:20px">Login</p>
             </div>
-        </form>
-    </body>
-    
-</html>
+
+            <div class="form-container">
+                <div>
+                    <input class="inputthing" name="username" type="text" placeholder="Username" autofocus>
+                </div>
+                <div>
+                    <input class="inputthing" name="password" type="password" placeholder="Password">
+                </div>
+            </div>
+
+            <div style="margin-top:40px; margin-bottom: 40px;">
+                <input style="font-size:150%" value="Login" type="submit">
+            </div>
+        </div>
+        
+        <div style="flex:2"></div>
+        
+    </div>
+</form>
+<?php require('footer.php'); ?>
