@@ -41,7 +41,7 @@ if (isset($_GET['id'])) {
     </div>
     <div class="project-profile-right-column">
         <div class="project-picture">
-            <img src="b0ss.png" width=100%; height=auto; style="border-radius: 25px;">
+            <img src="./static/<?php echo $project['image_path'] ?>" width=100%; height=auto; style="border-radius: 25px;"/>
         </div>
         <div class="project-donate" style="flex:1">
             <div class="projnamediv">
