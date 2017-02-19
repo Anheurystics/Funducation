@@ -3,7 +3,6 @@
         <div class="front-page-pic">
         	<img src="b0ss.png" width=100%/>
             <h1 style="transform: translate(-50%, -50%); position:absolute; top: 40%; left: 50%; color: white; font-size:400%; text-align:center">Help build our future by supporting our schools in need</h1>
-        	<a href="browse.php"><div class="browse" style="font-size:200%;">Browse</div></a>
         </div>
 
         <div class="about">

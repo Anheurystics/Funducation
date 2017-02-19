@@ -176,31 +176,7 @@ input[type="button"]:hover{
 
 .front-page-pic img{
     display: flex;
-}
-
-.browse{
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px 50px;
-    background-color: #ff8138;
-    color: #000000;
-    border-radius: 3px;
-    -webkit-transition: background-color 500ms ease-out 0s;
-    -moz-transition: background-color 500ms ease-out 0s;
-    -o-trasition: background-color 500ms ease-out 0s;
-    transition: background-color 500ms ease-out 0s;
-}
-
-.browse:hover{
-    cursor: pointer;
-    background-color: #d16729;
-    color: #FFFFFF;
-    -webkit-transition: background-color 500ms ease-out 0s;
-    -moz-transition: background-color 500ms ease-out 0s;
-    -o-trasition: background-color 500ms ease-out 0s;
-    transition: background-color 500ms ease-out 0s;
+    filter: brightness(60%);
 }
 
 .about{
