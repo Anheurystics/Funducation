@@ -47,7 +47,7 @@ if (isset($_GET['id'])) {
         <div style="display:flex; align-items:center; flex-direction:column; font-size:150%;">
             <div>
                 <p style="text-align:center; margin-top:0px;">Amount</p>
-                <input type="number" name="amount" value="50">
+                <input type="number" name="amount" min="1" max="<?php echo $project['goalAmount'] - $project['collectedAmount']; ?>" value="50">
             </div>
             <!--
             <div>
