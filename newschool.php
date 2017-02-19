@@ -33,7 +33,7 @@ if (isset($_GET['principal'])) {
 		
 		<div class="form-container">
 			<div>
-				<input class="inputthing" name="name" type="text" placeholder="Name">
+				<input class="inputthing" name="name" type="text" placeholder="Name" autofocus>
 			</div>
 			<div>
 				<input class="inputthing" name="location" type="text" placeholder="Location">

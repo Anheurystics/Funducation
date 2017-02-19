@@ -5,9 +5,16 @@
         	<a href="browse.php"><div class="browse" style="font-size:200%;">Browse</div></a>
         </div>
 
-        <div class="bottom">
-            <p style="margin-bottom:10px">About us</p>
-            <p style="font-size:80%; margin-top:0px;">Blah blah blah</p>
+        <div style="display:flex; flex-direction: row; background-color:lightgray;">
+        
+            <div style="flex:1"></div>
+
+            <div style="flex:2" class="bottom">
+                <p style="margin-bottom:10px">About us</p>
+                <p style="font-size:70%; margin-top:0px; text-align:center">Title of App is a crowdfunding web app that helps schools get the resources they need to improve its facilities</p>
+            </div>
+
+            <div style="flex:1"></div>
         </div>
 	</div>
 <?php require('footer.php'); ?>

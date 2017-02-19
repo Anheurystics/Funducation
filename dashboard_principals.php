@@ -8,7 +8,7 @@
 if($school)
 {
     ?>
-    <h2>Your Projects for <?php echo $school["name"] ?></h2>
+    <h2>Your Projects for <a href="./schoolview.php?id=<?php echo $school['id'] ?>"><?php echo $school["name"] ?></a></h2>
     <a href="<?php echo "newproject.php?school=".$school['id'] ?>"><div id="submit_button" style="margin-top:10px; margin-left:10px; display: inline-block">New Project</div></a>
     <?php
     if($projects)
@@ -29,14 +29,14 @@ if($school)
                     </div>
                 </div>		
                 <div class="donation-stats">
-                    <p>Goal: <?php echo $project['goalAmount'] ?></p>
+                    <p>Goal: <?php echo "₱" . $project['goalAmount'] ?></p>
                     <?php if($project['collectedAmount'] == $project['goalAmount']) { ?>
                         <p>Accomplished</p>
                     <?php } else { ?>
                         <?php $percentage = (($project['collectedAmount'] * 1.0) / $project['goalAmount']) * 100;
                         $percentage = round($percentage, 2)?>
                         <div class="progress-bar"><div class="progress-bar-fill" style="width:<?php echo $percentage . '%';?>"></div></div>
-                        <p><?php echo $project['goalAmount'] - $project['collectedAmount'] ?> still needed</p>
+                        <p><?php echo "₱" . ($project['goalAmount'] - $project['collectedAmount']) ?> still needed</p>
                     <?php } ?>
                 </div>
             </div>

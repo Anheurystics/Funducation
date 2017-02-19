@@ -68,7 +68,7 @@ else
                         </div>                   
                         <div class="form-container">
                             <div>
-                                <input class="inputthing" name="username" type="text" placeholder="Username">
+                                <input class="inputthing" name="username" type="text" placeholder="Username" autofocus>
                             </div>
                             <div>
                                 <input class="inputthing" name="email" type="text" placeholder="E-mail">
@@ -82,9 +82,8 @@ else
                         </div>
                         <div style="font-size: 123%;">
                             <p style="margin: 10px">Registering as:</p>
-                            <input type="radio" name="role" value="0" checked>Donor<br>
-                            <input type="radio" name="role" value="1">Teacher<br>
-                            <input type="radio" name="role" value="2">Principal<br> 
+                            <label><input type="radio" name="role" value="0" checked>Donor<br></label>
+                            <label><input type="radio" name="role" value="2">Principal<br></label>
                         </div>
 
                         <div style="margin-top:40px">

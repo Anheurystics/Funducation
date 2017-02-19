@@ -22,18 +22,18 @@ if($donations)
                     <p><?php echo $project["description"] ?></p>
                 </div>
                 <div class="description">
-                    <p>You have donated a total of <?php echo $donation['total_amount']; ?> to this project</p>
+                    <p>You have donated a total of <?php echo "₱" . $donation['total_amount']; ?> to this project</p>
                 </div>
             </div>		
             <div class="donation-stats">
-                <p>Goal: <?php echo $project['goalAmount'] ?></p>
+                <p>Goal: <?php echo "₱" . $project['goalAmount'] ?></p>
                 <?php if($project['collectedAmount'] == $project['goalAmount']) { ?>
                     <p>Accomplished</p>
                 <?php } else { ?>
                     <?php $percentage = (($project['collectedAmount'] * 1.0) / $project['goalAmount']) * 100;
                     $percentage = round($percentage, 2)?>
                     <div class="progress-bar"><div class="progress-bar-fill" style="width:<?php echo $percentage . '%';?>"></div></div>
-                    <p><?php echo $project['goalAmount'] - $project['collectedAmount'] ?> still needed</p>
+                    <p><?php echo "₱" . ($project['goalAmount'] - $project['collectedAmount']) ?> still needed</p>
                 <?php } ?>
             </div>
         </div>
