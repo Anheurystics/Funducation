@@ -1,49 +1,49 @@
 <?php
 include "header.php";
 
-if (isset($_GET['school'])) {
-	if (isset($_POST['submit'])) {
-		$info = pathinfo($_FILES['image']['name']);
-		$newname = hash("md5", $info['filename']) . "." . $info['extension'];
-		move_uploaded_file($_FILES['image']['tmp_name'], './static/'.$newname);
+// if school id is set and is POST, create new project and list of needs for project
+if (isset($_GET['school']) && isset($_POST['submit'])) {
+	// save file to /static/
+	$info = pathinfo($_FILES['image']['name']);
+	$newname = hash("md5", $info['filename']) . "." . $info['extension'];
+	move_uploaded_file($_FILES['image']['tmp_name'], './static/'.$newname);
 
-		$query = sprintf("insert into projects (name, school_id, description, goalAmount, image_path) values ('%s', %d, '%s', %d, '%s')", $_POST['name'], $_GET['school'], $_POST['description'], 0, $newname);
-		mysqli_query($conn, $query);
-		$insert_id = mysqli_insert_id($conn);
-		$need_insert = "insert into project_needs (project_id, need, price) values";
-		for($i = 0; $i < $_POST['n']; $i++)
+	$query = sprintf("insert into projects (name, school_id, description, goalAmount, image_path) values ('%s', %d, '%s', %d, '%s')", $_POST['name'], $_GET['school'], $_POST['description'], 0, $newname);
+	mysqli_query($conn, $query);
+	$insert_id = mysqli_insert_id($conn);
+	$need_insert = "insert into project_needs (project_id, need, price) values";
+	for($i = 0; $i < $_POST['n']; $i++)
+	{
+		if(isset($_POST['object'.$i]))
 		{
-			if(isset($_POST['object'.$i]))
+			if($i > 0)
 			{
-				if($i > 0)
-				{
-					$need_insert .= ',';
-				}
-				$need_insert .= sprintf(" (%d, '%s', '%s')", $insert_id, $_POST['object'.$i], $_POST['price'.$i]);
+				$need_insert .= ',';
 			}
+			$need_insert .= sprintf(" (%d, '%s', '%s')", $insert_id, $_POST['object'.$i], $_POST['price'.$i]);
 		}
-
-		mysqli_query($conn, $need_insert);
-
-		$goalAmount = mysqli_fetch_assoc(mysqli_query($conn, sprintf("select sum(price) as goalAmount from project_needs where project_id=%d group by project_id", $insert_id)))['goalAmount'];
-		$totalAmountQuery = sprintf("update projects set goalAmount=%d where id=%d", $goalAmount, $insert_id);
-
-		mysqli_query($conn, $totalAmountQuery);
-
-		$result = mysqli_affected_rows($conn);
-		if ($result) {
-            header("Location: dashboard.php");
-            exit();
-        }
-		
 	}
+
+	mysqli_query($conn, $need_insert);
+
+	// sum up goal amount based on project needs
+	$goalAmount = mysqli_fetch_assoc(mysqli_query($conn, sprintf("select sum(price) as goalAmount from project_needs where project_id=%d group by project_id", $insert_id)))['goalAmount'];
+	$totalAmountQuery = sprintf("update projects set goalAmount=%d where id=%d", $goalAmount, $insert_id);
+
+	mysqli_query($conn, $totalAmountQuery);
+
+	$result = mysqli_affected_rows($conn);
+	if ($result) {
+        header("Location: dashboard.php");
+        exit();
+    }
 } else {
+	// else redirect to browse page
 	header("Location: browse.php");
 	exit();
 }
-
-
 ?>
+
 <form action="" method="post" enctype="multipart/form-data">
 	<div style="text-align:center; font-size: 130%">
 		
@@ -79,6 +79,7 @@ if (isset($_GET['school'])) {
 <?php require('footer.php'); ?>
 
 <script>
+	// script to add item rows dynamically
 	var n = 0;
 	function addItem() {
 		var itemsDiv = document.getElementById('items');

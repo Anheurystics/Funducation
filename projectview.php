@@ -1,5 +1,6 @@
 <?php require('header.php');
 
+// get project and school if id is set, else redirect to index page
 if (isset($_GET['id'])) {
     $query = "select * from projects where id=" . $_GET['id'];
     $project = mysqli_fetch_assoc(mysqli_query($conn, $query));
@@ -29,6 +30,7 @@ if (isset($_GET['id'])) {
         <table style="table-layout: fixed; width: 100%; text-align:center; vertical-align:middle;">
             <tr><th>Item</th><th>Amount Needed</th></tr>
             <?php
+            // list down project needs
             $needs = mysqli_query($conn, "select * from project_needs where project_id=".$project['id']);
             while($need = mysqli_fetch_assoc($needs))
             {

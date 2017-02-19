@@ -1,15 +1,19 @@
 <?php require('header.php');
+
+// if not logged in, redirect to login page
 if (empty($_SESSION['logged_in']) || $_SESSION['logged_in'] == 0) {
     $_SESSION['login_redirect'] = "donateview.php?id=".$_GET['id'];
     header("Location: login.php");
     exit();
 }
 
+// if not a donor, redirect to project page
 if ($_SESSION['role'] != 'donors') {
     header("Location: projectview.php?id=".$_GET['id']);
     exit();
 }
 
+// get project and if POST, update collected amount and add donor to list of donors of the project
 if (isset($_GET['id'])) {
     $query = "select * from projects where id=" . $_GET['id'];
     $project = mysqli_fetch_assoc(mysqli_query($conn, $query));
@@ -17,11 +21,11 @@ if (isset($_GET['id'])) {
     if (isset($_POST['submit'])) {
         $query = "update projects set collectedAmount=(collectedAmount+" . $_POST['amount'] . ") where id=" . $_GET['id'];
         mysqli_query($conn, $query);
-        $result=mysqli_affected_rows($conn);
+        $result = mysqli_affected_rows($conn);
 
         $query = "insert into project_donor (project_id, donor_id, amount) values (" . $_GET['id'] . ", " . $_SESSION['id'] . ", " . $_POST['amount'] . ")";
         mysqli_query($conn, $query);
-        $result2=mysqli_affected_rows($conn);
+        $result2 = mysqli_affected_rows($conn);
 
         if ($result && $result2) {
             header("Location: projectview.php?id=".$_GET['id']);

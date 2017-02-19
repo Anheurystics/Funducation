@@ -1,23 +1,22 @@
 <?php
 include "header.php";
 
-if (isset($_GET['principal'])) {
-	if (isset($_POST['submit'])) {
-		$info = pathinfo($_FILES['image']['name']);
-		$newname = hash("md5", $info['filename']) . "." . $info['extension'];
-		move_uploaded_file($_FILES['image']['tmp_name'], './static/'.$newname);
-		
-		$query = sprintf("insert into schools (name, location, principal_id, image_path) values ('%s', '%s', %d, '%s')", $_POST['name'], $_POST['location'], $_GET['principal'], $newname);
-		mysqli_query($conn, $query);
-		$insert_id = mysqli_insert_id($conn);
-		mysqli_query($conn, sprintf("update principals set school_id=%d where id=%d", $insert_id, $_SESSION['id']));
-		$result = mysqli_affected_rows($conn);
-		if ($result) {
-            header("Location: dashboard.php");
-            exit();
-        }
-		
-	}
+// if principal id is set and is POST, create school and redirect to dashboard, else redirect to browse page
+if (isset($_GET['principal']) && isset($_POST['submit'])) {
+	// save image to /static/
+	$info = pathinfo($_FILES['image']['name']);
+	$newname = hash("md5", $info['filename']) . "." . $info['extension'];
+	move_uploaded_file($_FILES['image']['tmp_name'], './static/'.$newname);
+	
+	$query = sprintf("insert into schools (name, location, principal_id, image_path) values ('%s', '%s', %d, '%s')", $_POST['name'], $_POST['location'], $_GET['principal'], $newname);
+	mysqli_query($conn, $query);
+	$insert_id = mysqli_insert_id($conn);
+	mysqli_query($conn, sprintf("update principals set school_id=%d where id=%d", $insert_id, $_SESSION['id']));
+	$result = mysqli_affected_rows($conn);
+	if ($result) {
+        header("Location: dashboard.php");
+        exit();
+    }
 } else {
 	header("Location: browse.php");
 	exit();

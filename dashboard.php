@@ -1,4 +1,5 @@
 <?php
+// redirects to respective dashboards
 include 'header.php';
 if($_SESSION['logged_in'] == 0)
 {
