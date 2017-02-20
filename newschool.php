@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+require("header.php");
 
 // if principal id is set
 if (isset($_GET['principal'])) {

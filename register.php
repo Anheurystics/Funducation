@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-include "header.php";
+require("header.php");
 
 // check if user is taken in a cerstain table
 function checktableuser($conn, $tablename, $username)

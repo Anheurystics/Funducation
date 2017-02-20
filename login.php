@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+require("header.php");
 
 // if POST, authenticate user
 if(!empty($_POST))
