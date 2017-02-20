@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 // include file with db credentials
-require("../bh2017.php");
+require("bh2017.php");
 
 session_start();
 // connect to mysql
